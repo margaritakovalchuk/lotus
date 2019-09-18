@@ -1,0 +1,176 @@
+/*specification*/
+html {
+    font-family: Geometria, Arial, sans-serif;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p,
+a,
+span {
+    color: #000000;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.screen {
+    background-color: #f9f5f4;
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    padding: 33px 173px;
+}
+
+.container {
+    /*!*padding: 70px 90px;*! origin*/
+    padding: 50px 70px;
+}
+
+.padding-0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/*welcome-screen*/
+.screen__nav-bar,
+.screen__btn-nav,
+.screen__title,
+.screen__phone {
+    font-size: 12px;
+    font-family: Geometria, Arial, sans-serif;
+    line-height: 36px;
+}
+
+.screen__title {
+    position: relative;
+}
+
+.screen__title::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #f78e6a;
+    position: absolute;
+    top: 16px; /*top: 10px; origin*/
+    left: -10px;
+}
+
+.screen__phone,
+.socials {
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+.screen__phone {
+    line-height: 36px;
+}
+
+.yoga-girl {
+    display: table-cell;
+    height: calc(100vh - 80px);
+    width: auto;
+    padding-top: 11px;
+    margin-left: 35px;
+}
+
+.info__description, .info__title, .pager {
+    color: #f78e6a;
+    background: linear-gradient(to bottom, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info__description {
+    font-size: 17px;
+    writing-mode: vertical-lr;
+    position: absolute;
+    margin: 0;
+    top: 42px;
+    transform: rotate(180deg);
+    line-height: 1;
+}
+
+.info__title,
+.invitation:hover > .invitation__info {
+    background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info__title {
+    font-size: 135px;
+    font-family: "Geometria-Medium", Arial, sans-serif;
+    line-height: 157px;
+    margin-top: -35px;
+    margin-left: 9px;
+}
+
+.invitation:hover > .button-invitation {
+    background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+}
+
+.invitation__info {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.button-invitation,
+.next-page::after {
+    border-radius: 100%;
+    background: linear-gradient(to bottom, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+}
+
+.button-invitation {
+    width: 45px;
+    height: 45px;
+}
+
+.button-invitation span {
+    color: #fff;
+    font-size: 32px;
+    line-height: 26px;
+}
+
+.pager-current,
+.pager-last {
+    background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #f78e6a;
+    line-height: 24px;
+    font-family: Geometria-Light, Arial, sans-serif;
+}
+
+.pager-current {
+    font-size: 48px;
+}
+
+.pager-last {
+    font-size: 22px;
+}
+
+.social__link {
+    margin-right: 10px;
+    font-size: 10px;
+}
+
+.next-page::after {
+    width: 30px;
+    height: 30px;
+    content: "";
+}
