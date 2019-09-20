@@ -18,65 +18,105 @@
 <body>
 <div class="app">
     <section class="screen">
-        <div class="wrapper">
-            <div class="container-fluid padding-0">
-                <div class="row no-gutters">
-                    <nav class="col-lg-2 screen__nav-bar padding-0">
-                        <svg class="screen__bar" width="24px" height="16px">
-                            <line x1="0" y1="1" x2="2" y2="1" stroke="#000000" fill="transparent" stroke-width="1"/>
-                            <line x1="4" y1="1" x2="20" y2="1" stroke="#f78e6a" fill="transparent" stroke-width="1"/>
-                            <line x1="0" y1="7" x2="2" y2="7" stroke="#000000" fill="transparent" stroke-width="1"/>
-                            <line x1="4" y1="7" x2="20" y2="7" stroke="#f78e6a" fill="transparent" stroke-width="1"/>
-                            <line x1="0" y1="13" x2="2" y2="13" stroke="#000000" fill="transparent" stroke-width="1"/>
-                            <line x1="4" y1="13" x2="14" y2="13" stroke="#f78e6a" fill="transparent" stroke-width="1"/>
-                        </svg>
-                        <a class="screen__btn-nav" role="button">Меню</a>
-                    </nav>
-                    <div class="col-lg-4 offset-4 padding-0"><p class="screen__title">Добро пожаловать</p></div>
-                    <div class="col-lg-2 padding-0"><a class="screen__phone text-right d-block"
-                                                       href="tel:+7 (812) 345-56-97">+7 (812) 345-56-97</a>
+
+        <div class="container">
+            <div class="row">
+                <nav class="col-lg-2 nav-bar">
+                    <svg class="nav-bar__burger" width="24px" height="16px">
+                        <line x1="0" y1="1" x2="2" y2="1" stroke="#000000" fill="transparent" stroke-width="1"/>
+                        <line x1="4" y1="1" x2="20" y2="1" stroke="#f78e6a" fill="transparent" stroke-width="1"/>
+                        <line x1="0" y1="7" x2="2" y2="7" stroke="#000000" fill="transparent" stroke-width="1"/>
+                        <line x1="4" y1="7" x2="20" y2="7" stroke="#f78e6a" fill="transparent" stroke-width="1"/>
+                        <line x1="0" y1="13" x2="2" y2="13" stroke="#000000" fill="transparent" stroke-width="1"/>
+                        <line x1="4" y1="13" x2="14" y2="13" stroke="#f78e6a" fill="transparent" stroke-width="1"/>
+                    </svg>
+                    <span class="nav-bar__item nav-bar__item_main">Меню</span>
+
+<!--                            <ul class="nav flex-column dropdown main-navigation">-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link active" href="#">Добро пожаловать</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link" href="#">Направления и классы</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link" href="#">Пробное занятие</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link" href="#">Преподаватели</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link" href="#">Абонементы</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link" href="#">Расписание</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link" href="#">Отзывы</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link" href="#">Пробное занятие</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link" href="#">Контакты</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+                </nav>
+                <div class="col-lg-4 offset-4 "><p class="screen__title">Добро пожаловать</p></div>
+                <div class="col-lg-2"><a class="screen__phone text-right d-block" href="tel:+7 (812) 345-56-97">
+                    +7 (812) 345-56-97</a>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-1">
+                    <img class="logo" src="img/logo.png" alt="Logo">
+                </div>
+                <div class="col-lg-4">
+                    <div class="wrapper wrapper__yogi-person">
+                        <img class="yogi-person" src="img/screen-01.png" alt="Yoga-girl"/>
                     </div>
                 </div>
-                <div class="row no-gutters align-items-center">
-                    <div class="col-lg-1">
-                        <img class="logo" src="img/logo.png" alt="Logo">
+                <div class="col-lg-5 offset-1 info">
+                    <div class="row">
+                        <p class="info__description">Центр йоги</p>
+                        <p class="info__title">Lotos</p>
                     </div>
-                    <div class="col-lg-4">
-                        <div style="display: table;">
-                            <img class="yoga-girl" src="img/screen-01.png" alt="Yoga-girl"/>
-                        </div>
+                    <div class="row invitation">
+                        <a class="invitation__info col-lg-8" href="#">
+                            <span class="invitation__button">+</span>
+                            Приглашаем вас и ваших друзей на бесплатное пробное занятие</a>
                     </div>
-                    <div class="col-lg-5 offset-1 info">
-                        <div class="row no-gutters">
-                            <p class="info__description">Центр йоги</p>
-                            <p class="info__title">Lotos</p>
+                    <!--                    <a class="invitation">-->
+                    <!--                        <row class="invitation__info" href="#">-->
+                    <!--                            <div class="col-lg-8">-->
+                    <!--                                <span class="invitation__button">+</span>-->
+                    <!--                                <p class="invitation__text">Приглашаем вас и ваших друзей на бесплатное пробное занятие</p>-->
+                    <!--                            </div>-->
+                    <!--                        </row>-->
+                    <!--                    </a>-->
+                </div>
+                <div class="col-lg-1">
+                    <div class="row pager text-right">
+                        <div class="col-lg-12">
+                            <a class="pager-current" href="">01</a>
                         </div>
-                        <div class="row invitation align-items-center">
-                            <button class="button-invitation"><span>+</span></button>
-                            <a class="invitation__info col-lg-7 padding-0" href="#">Приглашаем вас и ваших
-                                друзей на бесплатное пробное занятие</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-1">
-                        <div class="row pager text-right">
-                            <div class="col-lg-12">
-                                <a class="pager-current">01</a>
-                            </div>
-                            <div class="col-lg-12">
-                                <a class="pager-last">- 09</a>
-                            </div>
+                        <div class="col-lg-12">
+                            <a class="pager-last" href="">- 09</a>
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
-                    <div class="col-lg-2 socials">
-                        <a class="social__link vk">VK</a>
-                        <a class="social__link fb">FB</a>
-                        <a class="social__link inst">INST</a>
-                    </div>
-                    <div class="col-lg-2 offset-lg-8">
-                        <p class="next-page text-right">Направления и классы&#x25BC;</p>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 socials">
+                    <a class="social__link vk" href="">VK</a>
+                    <a class="social__link fb" href="">FB</a>
+                    <a class="social__link inst" href="">INST</a>
+                </div>
+                <div class="col-lg-2 offset-lg-8 text-right">
+                    <a class="next-page" href="#">
+                        <p class="next-page__title">Направления и классы</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -95,39 +135,7 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
 
-    <!--<div class="row">-->
-    <!--    <div class="col-lg-6">-->
-    <!--        <ul class="nav flex-column dropdown main-navigation">-->
-    <!--            <li class="nav-item">-->
-    <!--                <a class="nav-link active" href="#">Добро пожаловать</a>-->
-    <!--            </li>-->
-    <!--            <li class="nav-item">-->
-    <!--                <a class="nav-link" href="#">Направления и классы</a>-->
-    <!--            </li>-->
-    <!--            <li class="nav-item">-->
-    <!--                <a class="nav-link" href="#">Пробное занятие</a>-->
-    <!--            </li>-->
-    <!--            <li class="nav-item">-->
-    <!--                <a class="nav-link" href="#">Преподаватели</a>-->
-    <!--            </li>-->
-    <!--            <li class="nav-item">-->
-    <!--                <a class="nav-link" href="#">Абонементы</a>-->
-    <!--            </li>-->
-    <!--            <li class="nav-item">-->
-    <!--                <a class="nav-link" href="#">Расписание</a>-->
-    <!--            </li>-->
-    <!--            <li class="nav-item">-->
-    <!--                <a class="nav-link" href="#">Отзывы</a>-->
-    <!--            </li>-->
-    <!--            <li class="nav-item">-->
-    <!--                <a class="nav-link" href="#">Пробное занятие</a>-->
-    <!--            </li>-->
-    <!--            <li class="nav-item">-->
-    <!--                <a class="nav-link" href="#">Контакты</a>-->
-    <!--            </li>-->
-    <!--        </ul>-->
-    <!--    </div>-->
-    <!--</div>-->
+
 </div>
 </body>
 </html>

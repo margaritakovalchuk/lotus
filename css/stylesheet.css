@@ -32,23 +32,9 @@ p {
     height: 100vh;
 }
 
-.wrapper {
-    padding: 33px 173px;
-}
-
-.container {
-    /*!*padding: 70px 90px;*! origin*/
-    padding: 50px 70px;
-}
-
-.padding-0 {
-    padding-right: 0;
-    padding-left: 0;
-}
-
 /*welcome-screen*/
-.screen__nav-bar,
-.screen__btn-nav,
+.nav-bar,
+.nav-bar__item_main,
 .screen__title,
 .screen__phone {
     font-size: 12px;
@@ -62,13 +48,13 @@ p {
 
 .screen__title::before {
     content: "";
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     border-radius: 100%;
     background-color: #f78e6a;
     position: absolute;
-    top: 16px; /*top: 10px; origin*/
-    left: -10px;
+    top: 16px;
+    left: -12px;
 }
 
 .screen__phone,
@@ -80,12 +66,15 @@ p {
     line-height: 36px;
 }
 
-.yoga-girl {
+.wrapper__yogi-person {
+    display: table;
+}
+
+.yogi-person {
     display: table-cell;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 140px);
     width: auto;
     padding-top: 11px;
-    margin-left: 35px;
 }
 
 .info__description, .info__title, .pager {
@@ -120,7 +109,7 @@ p {
     margin-left: 9px;
 }
 
-.invitation:hover > .button-invitation {
+.invitation:hover > .invitation__button {
     background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
 }
 
@@ -129,18 +118,15 @@ p {
     line-height: 21px;
 }
 
-.button-invitation,
-.next-page::after {
+.invitation__button {
     border-radius: 100%;
     background: linear-gradient(to bottom, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
 }
 
-.button-invitation {
+.invitation__button {
     width: 45px;
     height: 45px;
-}
-
-.button-invitation span {
+    display: inline-block;
     color: #fff;
     font-size: 32px;
     line-height: 26px;
@@ -162,15 +148,34 @@ p {
 
 .pager-last {
     font-size: 22px;
+    letter-spacing: 2px;
 }
 
 .social__link {
     margin-right: 10px;
-    font-size: 10px;
+    font-size: 8px;
+}
+.social__link:hover {
+    color: #f78e6a;
+}
+.next-page__title {
+    font-size: 11px;
 }
 
-.next-page::after {
-    width: 30px;
-    height: 30px;
-    content: "";
+.next-page__title::after {
+    content: '\25bc';
+    font-size: 10px;
+    color: #ffffff;
+    width: 20px;
+    height: 20px;
+    /*line-height: 20px;*/
+    display: inline-block;
+    background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+    border-radius: 100%;
+}
+
+.next-page__title:hover {
+    background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
