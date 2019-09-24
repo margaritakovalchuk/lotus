@@ -45,6 +45,12 @@ ul {
     height: calc(100vh - 116px);
 }
 
+.fas {
+    font-family: 'FontAwesome', Arial, sans-serif;
+    color: #ffffff;
+    font-style: normal;
+}
+
 /*welcome-screen*/
 .header_main {
     margin-bottom: 21px;
@@ -315,8 +321,8 @@ ul {
 }
 
 .button__item {
+    font-size: 16px;
     position: absolute;
-    font-size: 20px;
     left: 0;
     bottom: 0;
     border-radius: 100%;
@@ -339,9 +345,10 @@ ul {
 
 .registry-input-group {
     position: relative;
+    margin-bottom: 30px;
 }
 
-.yogi-person_smaller {
+.yogi-person_small {
     height: calc(100vh - 250px);
 }
 
@@ -383,12 +390,6 @@ input[type="tel"]:focus {
 
 input[type="tel"] {
     margin-bottom: 30px;
-}
-
-.fa-envelope {
-    font-size: 15px;
-    font-family: 'FontAwesome', Arial, sans-serif;
-    color: #ffffff;
 }
 
 .discount__agreement {
