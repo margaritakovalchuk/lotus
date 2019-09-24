@@ -39,9 +39,10 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Geometria, Arial, sans-serif;
 }
 
-.screen_padding {
+.screen_height {
     height: calc(100vh - 116px);
 }
 
@@ -49,6 +50,12 @@ ul {
     font-family: 'FontAwesome', Arial, sans-serif;
     color: #ffffff;
     font-style: normal;
+}
+
+.text-gradient_top {
+    background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*welcome-screen*/
@@ -130,18 +137,18 @@ ul {
     width: auto;
 }
 
-.info {
+.title {
     margin-bottom: 65px;
 }
 
-.info__description, .info__title, .pager {
+.title__description, .title__school, .pager {
     color: #f78e6a;
     background: linear-gradient(to bottom, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.info__description {
+.title__description {
     font-size: 17px;
     writing-mode: vertical-lr;
     position: absolute;
@@ -152,7 +159,7 @@ ul {
     left: -10px;
 }
 
-.info__title {
+.title__school {
     background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -242,66 +249,62 @@ ul {
 
 
 /*classes-screen*/
-.classes-screen {
-    font-family: Geometria, Arial, sans-serif;
-}
-
-.classes {
+.switcher {
     position: relative;
 }
 
-.class__item {
+.switcher__item {
     font-size: 12px;
     line-height: 28px;
     color: #666666;
 }
 
-.class__item_active {
+.switcher__item_active {
     color: #000000;
     font-weight: 700;
 }
 
-.class__item:first-child::before,
-.class-info__main {
+.switcher__item:first-child::before,
+.info__title {
     color: #f78e6a;
 }
 
-.class__link:hover {
+.switcher__link:hover {
     color: #f78e6a;
 }
 
-.class-info,
-.classes-wrapper {
+.info,
+.switcher-wrapper {
     position: relative;
     top: 75px;
 }
 
-.class__item:first-child::before {
+.switcher__item:first-child::before {
     content: 'Yoga —';
     position: absolute;
     left: -51px;
 }
 
-.class-info__main {
+.info__title {
     font-size: 34px;
     line-height: 34px;
     margin-bottom: 10px;
 }
 
-.class-info__name {
+.info__subtitle {
     margin-bottom: 30px;
 }
 
-.class__description {
+.info__description {
     font-size: 12px;
     line-height: 23px;
 }
 
-.class__description:first-child {
+.info__description:first-child {
     margin-bottom: 18px;
 }
 
-.class__description:last-child {
+.info__description:last-child {
     margin-bottom: 16px;
 }
 
@@ -394,4 +397,29 @@ input[type="tel"] {
 
 .discount__agreement {
     font-size: 11px;
+}
+
+.alert__notification {
+    position: absolute;
+}
+
+.alert__thanks {
+    font-size: 52px;
+}
+
+.alert__details {
+    font-size: 13px;
+}
+
+.switcher__item_trainer:first-child::before {
+    content: 'Trainer —';
+    left: -61px;
+}
+
+.info__title_black {
+    color: #000000;
+}
+
+.yogi-person_bgc:after { /*TODO*/
+    background: url("../img/ellipse.png") no-repeat;
 }
