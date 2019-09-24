@@ -50,7 +50,7 @@ ul {
     margin-bottom: 21px;
 }
 
-.nav,
+.nav__item,
 .screen__title,
 .screen__phone {
     font-size: 12px;
@@ -87,11 +87,16 @@ ul {
     position: absolute;
     top: 0;
     left: 15px;
+    padding: 0;
 }
 
 .nav__burger {
     position: absolute;
     left: 15px;
+}
+
+.nav__menu {
+    padding: 0;
 }
 
 .nav__item,
