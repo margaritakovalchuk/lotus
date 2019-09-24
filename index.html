@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="libs/fontawesome-free-5.10.2-web/fontawesome-free-5.10.2-web/css/fontawesome.css">
+    <link rel="stylesheet" href="libs/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css ">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/stylesheet.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
@@ -16,14 +16,13 @@
 </head>
 
 <body>
-<div class="app">
     <section class="screen">
-        <div class="screen__container_padding">
-            <div class="container position-relative">
-                <header class="header_main">
+        <div class="screen__welcome screen_padding">
+            <div class="container">
+                <header class="header_main position-relative">
                     <div class="row">
-                        <nav class="col-lg-1 nav">
-                            <svg class="nav-bar__burger" width="16px" height="13px">
+                        <div class="col-lg-1">
+                            <svg class="nav__burger" width="16px" height="13px">
                                 <line x1="0" y1="1" x2="2" y2="1" stroke="#000000" fill="transparent"
                                       stroke-width="1"/>
                                 <line x1="4" y1="1" x2="16" y2="1" stroke="#f78e6a" fill="transparent"
@@ -37,47 +36,49 @@
                                 <line x1="3" y1="12" x2="13" y2="12" stroke="#f78e6a" fill="transparent"
                                       stroke-width="1"/>
                             </svg>
-                            <ul class="nav__list">
-                                <li class="nav__item_main">Меню</li>
+                            <button class="nav nav__menu">Меню</button>
+                            <nav class="nav nav_position-absolute">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a class="nav__link nav__link_active" href="#">Главная</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Направления</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Преподаватели</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Абонементы</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Расписание</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-lg-3 offset-5">
+                            <ul class="screen__title">
+                                <li>Добро пожаловать</li>
                             </ul>
-                        </nav>
-                        <div class="col-lg-2 offset-5"><p class="screen__title">Добро пожаловать</p></div>
-                        <div class="col-lg-2 offset-2"><a class="screen__phone text-right d-block"
-                                                          href="tel:+7 (812) 345-56-97">
-                            +7 (812) 345-56-97</a>
+                        </div>
+                        <div class="col-lg-2 offset-1">
+                            <a class="screen__phone text-right d-block" href="tel:+78123455697">
+                                +7 (812) 345-56-97
+                            </a>
                         </div>
                     </div>
                 </header>
-<!--                <nav class="nav nav_position-absolute">-->
-<!--                    <ul class="nav__list">-->
-<!--                        <li class="nav__item">-->
-<!--                            <a class="nav__link active" href="#">Главная</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav__item">-->
-<!--                            <a class="nav__link" href="#">Направления</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav__item">-->
-<!--                            <a class="nav__link" href="#">Преподаватели</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav__item">-->
-<!--                            <a class="nav__link" href="#">Абонементы</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav__item">-->
-<!--                            <a class="nav__link" href="#">Расписание</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav__item">-->
-<!--                            <a class="nav__link" href="#">Отзывы</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav__item">-->
-<!--                            <a class="nav__link" href="#">Контакты</a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-
-<!--                </nav>-->
                 <div class="main-content">
                     <div class="row align-items-center">
                         <div class="col-lg-1">
-                            <img class="logo" src="img/logo.png" alt="Logo">
+                            <img class="lotos" src="img/lotos.png" alt="lotos">
                         </div>
                         <div class="col-lg-4">
                             <div class="wrapper wrapper__yogi-person">
@@ -90,12 +91,6 @@
                                 <p class="info__title">Lotos</p>
                             </div>
                             <div class="row invitation">
-                                <!--                                <a class="invitation__info" href="#">-->
-                                <!--                                    <span class="invitation__button col-lg-2">+</span>-->
-                                <!--                                    <p class="invitation__title col-lg-8">Приглашаем вас и ваших друзей на бесплатное-->
-                                <!--                                        пробное-->
-                                <!--                                        занятие</p>-->
-                                <!--                                </a>-->
                                 <a class="col-lg-7 offset-1 invitation__info" href="#">
                                     <p class="invitation__title">Приглашаем вас и ваших друзей на бесплатное пробное
                                         занятие</p>
@@ -105,7 +100,140 @@
                         <div class="col-lg-1">
                             <div class="row pager text-right">
                                 <div class="col-lg-12 mb-2">
-                                    <a class="pager-current" href="">01</a>
+                                    <!--                                    TODO maybe it is not a link -->
+                                    <a class="pager-current" href="#">01</a>
+                                </div>
+                                <div class="col-lg-12">
+                                    <a class="pager-last" href="#">- 09</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer_main">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <ul class="socials d-flex">
+                                <li><a class="social__link vk" href="#">VK</a></li>
+                                <li><a class="social__link fb" href="#">FB</a></li>
+                                <li><a class="social__link inst" href="#">INST</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 offset-lg-8 text-right">
+                            <a class="next-page" href="#">
+                                <p class="next-page__title">Направления и классы</p>
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <section class="screen classes-screen">
+        <div class="screen_padding position-relative">
+            <div class="container">
+                <header class="header_main">
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <svg class="nav__burger" width="16px" height="13px">
+                                <line x1="0" y1="1" x2="2" y2="1" stroke="#000000" fill="transparent"
+                                      stroke-width="1"/>
+                                <line x1="4" y1="1" x2="16" y2="1" stroke="#f78e6a" fill="transparent"
+                                      stroke-width="1"/>
+                                <line x1="0" y1="6" x2="2" y2="6" stroke="#000000" fill="transparent"
+                                      stroke-width="1"/>
+                                <line x1="4" y1="6" x2="16" y2="6" stroke="#f78e6a" fill="transparent"
+                                      stroke-width="1"/>
+                                <line x1="0" y1="12" x2="2" y2="12" stroke="#000000" fill="transparent"
+                                      stroke-width="1"/>
+                                <line x1="3" y1="12" x2="13" y2="12" stroke="#f78e6a" fill="transparent"
+                                      stroke-width="1"/>
+                            </svg>
+                            <button class="nav nav__menu">Меню</button>
+                            <nav class="nav nav_position-absolute">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a class="nav__link nav__link_active" href="#">Главная</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Направления</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Преподаватели</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Абонементы</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Расписание</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-lg-3 offset-5">
+                            <ul class="screen__title">
+                                <li>Направления и классы</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 offset-1"><a class="screen__phone text-right d-block"
+                                                          href="tel:+78123455697">
+                            +7 (812) 345-56-97</a>
+                        </div>
+                    </div>
+                </header>
+                <div class="main-content">
+                    <div class="row align-items-center">
+                        <div class="col-lg-1">
+                            <img class="lotos" src="img/lotos.png" alt="lotos">
+                        </div>
+                        <div class="col-lg-2 align-self-start classes-wrapper">
+                            <ul class="classes">
+                                <li class="class__item class__item_active"><a class="class__link" href="#">Для
+                                    начинающих</a></li>
+                                <li class="class__item"><a class="class__link" href="#">Аштанга Виньяса</a></li>
+                                <li class="class__item"><a class="class__link" href="#">Универсальная</a></li>
+                                <li class="class__item"><a class="class__link" href="#">Кундалини</a></li>
+                                <li class="class__item"><a class="class__link" href="#">Айенгара</a></li>
+                                <li class="class__item"><a class="class__link" href="#">Терапия</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="wrapper wrapper__yogi-person">
+                                <img class="yogi-person" src="img/screen-02.png" alt="Yoga-girl"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 class-info align-self-start">
+                            <div class="class-info__main">Yoga —</div>
+                            <div class="class-info__name">Для начинающих</div>
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <p class="class__description">
+                                        Йога для начинающих рассчитана на тех, кто до этого никогда ей не занимался и
+                                        требует обучения. Такой программный комплекс существует и в нашем центре.
+                                    </p>
+                                </div>
+                                <div class="col-lg-9">
+                                    <p class="class__description">
+                                        Мы предлагаем посетить бесплатное вводное занятие, чтобы узнать, почему так
+                                        много людей занимаются йогой и придерживаются здорового образа жизни.
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="button__sign-in">
+                                <span class="button__item">+</span>Записаться онлайн
+                            </button>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="row pager text-right">
+                                <div class="col-lg-12 mb-2">
+                                    <a class="pager-current" href="">03</a>
                                 </div>
                                 <div class="col-lg-12">
                                     <a class="pager-last" href="">- 09</a>
@@ -115,15 +243,17 @@
                     </div>
                 </div>
                 <footer class="footer_main">
-                    <div class="row">
-                        <div class="col-lg-2 socials">
-                            <a class="social__link vk" href="">VK</a>
-                            <a class="social__link fb" href="">FB</a>
-                            <a class="social__link inst" href="">INST</a>
+                    <div class="row py-3">
+                        <div class="col-lg-2">
+                            <ul class="socials d-flex">
+                                <li><a class="social__link vk" href="#">VK</a></li>
+                                <li><a class="social__link fb" href="#">FB</a></li>
+                                <li><a class="social__link inst" href="#">INST</a></li>
+                            </ul>
                         </div>
                         <div class="col-lg-2 offset-lg-8 text-right">
                             <a class="next-page" href="#">
-                                <p class="next-page__title">Направления и классы</p>
+                                <p class="next-page__title">Пробное занятие</p>
                             </a>
 
                         </div>
@@ -133,20 +263,124 @@
         </div>
     </section>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-
-
-</div>
+    <section class="screen trial-screen">
+        <div class="screen_padding position-relative">
+            <div class="container">
+                <header class="header_main">
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <svg class="nav__burger" width="16px" height="13px">
+                                <line x1="0" y1="1" x2="2" y2="1" stroke="#000000" fill="transparent"
+                                      stroke-width="1"/>
+                                <line x1="4" y1="1" x2="16" y2="1" stroke="#f78e6a" fill="transparent"
+                                      stroke-width="1"/>
+                                <line x1="0" y1="6" x2="2" y2="6" stroke="#000000" fill="transparent"
+                                      stroke-width="1"/>
+                                <line x1="4" y1="6" x2="16" y2="6" stroke="#f78e6a" fill="transparent"
+                                      stroke-width="1"/>
+                                <line x1="0" y1="12" x2="2" y2="12" stroke="#000000" fill="transparent"
+                                      stroke-width="1"/>
+                                <line x1="3" y1="12" x2="13" y2="12" stroke="#f78e6a" fill="transparent"
+                                      stroke-width="1"/>
+                            </svg>
+                            <button class="nav nav__menu">Меню</button>
+                            <nav class="nav nav_position-absolute">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a class="nav__link nav__link_active" href="#">Главная</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Направления</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Преподаватели</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Абонементы</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Расписание</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-lg-3 offset-5">
+                            <ul class="screen__title">
+                                <li>Пробное занятие</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 offset-1"><a class="screen__phone text-right d-block"
+                                                          href="tel:+78123455697">
+                            +7 (812) 345-56-97</a>
+                        </div>
+                    </div>
+                </header>
+                <div class="main-content">
+                    <div class="row align-items-center">
+                        <div class="col-lg-1">
+                            <img class="lotos" src="img/lotos.png" alt="lotos">
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="wrapper wrapper__yogi-person">
+                                <img class="yogi-person yogi-person_smaller" src="img/screen-03.png" alt="Yoga-girl"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 offset-2 discount">
+                            <p class="discount__details">
+                                <span class="discount__amount">10% </span>скидка <br/>
+                                на абонемент
+                            </p>
+                            <p class="discount__intro">Мы сделаем для вас 10% скидку
+                                на абонемент, купленный в день посещения вводного занятия.</p>
+                            <form class="registry">
+                                <label class="sr-only">Ваше имя</label>
+                                <input type="text" placeholder="Ваше имя">
+                                <label class="sr-only">Ваш телефон</label>
+                                <input type="tel" placeholder="Ваш телефон">
+                                <div class="registry-input-group">
+                                    <input class="button__sign-in" type="submit" value="Отправить заявку"/>
+                                    <i class="button__item fas fa-envelope"></i>
+                                </div>
+                            </form>
+                            <p class="agreement discount__agreement">Нажимая «Отправить заявку», вы даете согласие на
+                                обработку своих персональных данных</p>
+                        </div>
+                        <div class="col-lg-1 offset-1">
+                            <div class="row pager text-right">
+                                <div class="col-lg-12 mb-2">
+                                    <a class="pager-current" href="">02</a>
+                                </div>
+                                <div class="col-lg-12">
+                                    <a class="pager-last" href="">- 09</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer_main">
+                    <div class="row py-3">
+                        <div class="col-lg-2">
+                            <ul class="socials d-flex">
+                                <li><a class="social__link vk" href="#">VK</a></li>
+                                <li><a class="social__link fb" href="#">FB</a></li>
+                                <li><a class="social__link inst" href="#">INST</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 offset-lg-8 text-right">
+                            <a class="next-page" href="#">
+                                <p class="next-page__title">Пробное занятие</p>
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
