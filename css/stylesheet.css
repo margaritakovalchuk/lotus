@@ -32,6 +32,11 @@ ul {
     margin: 0;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .screen {
     background-color: #f9f5f4;
     width: 100%;
@@ -44,6 +49,12 @@ ul {
 
 .screen_height {
     height: calc(100vh - 116px);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
 }
 
 .fas {
@@ -101,7 +112,6 @@ ul {
     top: 0;
     left: 15px;
     padding: 0;
-    /*background-color: #f9f5f4;*/
 }
 
 .nav__burger {
@@ -238,7 +248,10 @@ ul {
     font-size: 11px;
 }
 
-.next-page__title::after {
+.next-page__title::after,
+.btn-small,
+.contact__map::before,
+.contact__review::before {
     content: '\25bc';
     font-size: 8px;
     color: #ffffff;
@@ -479,6 +492,7 @@ input[type="tel"] {
     border-collapse: separate;
     border-spacing: 1px;
 }
+
 .schedule__title,
 .schedule__title_bold {
     font-size: 10px;
@@ -493,5 +507,90 @@ input[type="tel"] {
 
 .schedule__title_bold {
     font-family: Geometria-Bold, Arial, sans-serif;
+    color: #f78e6a;
+}
+
+.schedule__title_download {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.schedule__title_download:hover {
+    background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+}
+
+.schedule__title_download:hover .schedule__text {
+    color: #ffffff;
+}
+
+.schedule__title_download:hover .schedule__download {
+    background: #ffffff;
+}
+
+.schedule__title_download:hover .fa-arrow-down {
+    color: rgba(247, 141, 106, 1);
+}
+
+.schedule__download {
+    border-radius: 100%;
+    margin-left: 0;
+    margin-right: 15px;
+    background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+}
+
+.switcher__item_client:first-child::before {
+    content: 'Clients —';
+    left: -61px;
+}
+
+.clients-screen .info__title {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.clients-screen .info__subtitle {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+/*contacts-screen*/
+.google-map {
+    width: 600px;
+    height: 450px;
+}
+
+.contact_small,
+.contact__map,
+.contact__review {
+    font-size: 12px;
+}
+
+.contact__address {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.contact__map::before,
+.contact__review::before {
+    border-radius: 100%;
+    background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+    font-size: 12px;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.contact__map::before {
+    content: '\f041';
+    font-family: FontAwesome;
+}
+
+.contact__review::before {
+    content: '\f003';
+    font-family: FontAwesome;
+}
+
+.contact__map:hover,
+.contact__review:hover {
     color: #f78e6a;
 }
