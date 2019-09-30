@@ -48,13 +48,14 @@ img {
 }
 
 .screen_height {
-    height: calc(100vh - 116px);
+    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
 }
 
 .main-content {
     flex: 1;
+    margin-bottom: 30px;
 }
 
 .fas {
@@ -67,6 +68,10 @@ img {
     background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.lotos {
+    width: 50%;
 }
 
 /*welcome-screen*/
@@ -107,11 +112,12 @@ img {
     color: #f78e6a;
 }
 
-.nav_position-absolute {
+.navbar_position-absolute {
     position: absolute;
     top: 0;
     left: 15px;
     padding: 0;
+    z-index: 9999;
 }
 
 .nav__burger {
@@ -149,7 +155,7 @@ img {
 }
 
 .title {
-    margin-bottom: 65px;
+    /*margin-bottom: 65px;*/
 }
 
 .title__description, .title__school, .pager {
@@ -164,10 +170,10 @@ img {
     writing-mode: vertical-lr;
     position: absolute;
     margin: 0;
-    top: 42px;
+    top: 24px;
     transform: rotate(180deg);
     line-height: 1;
-    left: -10px;
+    left: 13px;
 }
 
 .title__school {
@@ -176,10 +182,12 @@ img {
     -webkit-text-fill-color: transparent;
     font-size: 135px;
     font-family: "Geometria-Medium", Arial, sans-serif;
-    line-height: 157px;
+    line-height: 135px;
+    position: relative;
+    left: -10px;
 }
 
-.invitation__info {
+.invitation__title {
     font-size: 14px;
 }
 
@@ -201,7 +209,7 @@ img {
     background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
     border-radius: 100%;
     position: absolute;
-    left: -45px;
+    left: -55px;
 }
 
 .invitation__info > .invitation__title:hover::before,
@@ -263,6 +271,15 @@ img {
 
 
 /*classes-screen*/
+.info {
+    position: relative;
+    top: 75px;
+}
+
+.switcher-wrapper {
+    top: 75px;
+}
+
 .switcher {
     position: relative;
 }
@@ -285,12 +302,6 @@ img {
 
 .switcher__link:hover {
     color: #f78e6a;
-}
-
-.info,
-.switcher-wrapper {
-    position: relative;
-    top: 75px;
 }
 
 .switcher__item:first-child::before {
@@ -366,7 +377,7 @@ img {
 }
 
 .yogi-person_small {
-    height: calc(100vh - 250px);
+    /*max-height: calc(100vh - 250px);*/
 }
 
 .discount__details {
@@ -578,16 +589,15 @@ input[type="tel"] {
     font-size: 12px;
     margin-left: 0;
     margin-right: 5px;
+    font-family: FontAwesome;
 }
 
 .contact__map::before {
     content: '\f041';
-    font-family: FontAwesome;
 }
 
 .contact__review::before {
     content: '\f003';
-    font-family: FontAwesome;
 }
 
 .contact__map:hover,
