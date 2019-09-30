@@ -1,8 +1,4 @@
 /*specification*/
-html {
-    font-family: Geometria, Arial, sans-serif;
-}
-
 button {
     padding: 0;
     border: none;
@@ -41,16 +37,16 @@ img {
     background-color: #f9f5f4;
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /*TODO*/
+    justify-content: center; /*TODO*/
+    align-items: center; /*TODO*/
     font-family: Geometria, Arial, sans-serif;
 }
 
 .screen_height {
     height: calc(100vh - 100px);
-    display: flex;
-    flex-direction: column;
+    display: flex; /*TODO*/
+    flex-direction: column; /*TODO*/
 }
 
 .main-content {
@@ -112,27 +108,22 @@ img {
     color: #f78e6a;
 }
 
-.navbar_position-absolute {
-    position: absolute;
-    top: 0;
-    left: 15px;
-    padding: 0;
-    z-index: 9999;
-}
-
+.navbar_position-absolute,
 .nav__burger {
     position: absolute;
     left: 15px;
 }
 
-.nav__menu {
+.navbar_position-absolute {
+    top: 0;
     padding: 0;
+    z-index: 9999;
 }
 
-.nav__item,
-.nav__menu {
+.nav__item {
     margin-bottom: 16px;
     margin-left: 36px;
+    padding: 0;
 }
 
 .nav__item:hover .nav__link {
@@ -589,7 +580,7 @@ input[type="tel"] {
     font-size: 12px;
     margin-left: 0;
     margin-right: 5px;
-    font-family: FontAwesome;
+    font-family: FontAwesome, Arial, sans-serif;
 }
 
 .contact__map::before {

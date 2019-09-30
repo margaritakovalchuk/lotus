@@ -1,0 +1,190 @@
+@import "../../css/fonts.css";
+
+$main-color: #f78e6a;
+$complementary-color: #f9f5f4;
+$text-color: #000000;
+
+@mixin flex-col-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin icon-fontawesome {
+  font-family: 'FontAwesome', Arial, sans-serif;
+  color: #ffffff;
+  font-style: normal;
+}
+
+@mixin text-gradient_top {
+  background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*specification*/
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p,
+a,
+span {
+  color: $text-color;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.screen {
+  background-color: $complementary-color;
+  width: 100%;
+  height: 100vh;
+  font-family: Geometria, Arial, sans-serif;
+  @include flex-col-center;
+
+  &_height {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.main-content {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.lotos {
+  width: 50%;
+}
+
+/*welcome-screen*/
+
+.header_main {
+  margin-bottom: 21px;
+}
+
+.nav__item,
+.screen__title, /*TODO чи можна їх перекинути до скіріна?*/
+.screen__phone { /*TODO*/
+  font-size: 12px;
+  font-family: Geometria, Arial, sans-serif;
+  line-height: 12px;
+}
+
+.navbar_position-absolute,
+.nav__burger {
+  position: absolute;
+  left: 15px;
+}
+
+.navbar_position-absolute {
+  top: 0;
+  padding: 0;
+  z-index: 9999;
+}
+
+.nav__item {
+  margin-bottom: 16px;
+  margin-left: 36px;
+
+  &hover .nav__link {
+    color: $main-color;
+  }
+}
+
+.nav__link_active {
+  color: $main-color;
+}
+
+.wrapper__yogi-person {
+  display: table;
+}
+
+.yogi-person {
+  display: table-cell;
+  height: calc(100vh - 152px);
+  width: auto;
+}
+
+.title__description,
+.title__school,
+.pager {
+  color: $main-color;
+  @include text-gradient_top;
+}
+
+.title__description {
+  font-size: 17px;
+  writing-mode: vertical-lr;
+  position: absolute;
+  margin: 0;
+  top: 24px;
+  transform: rotate(180deg);
+  line-height: 1;
+  left: 13px;
+}
+
+.title__school {
+  @include text-gradient_top; /*TODO*/
+  font-size: 135px;
+  font-family: "Geometria-Medium", Arial, sans-serif;
+  line-height: 135px;
+  position: relative;
+  left: -10px;
+}
+
+.screen__title li {
+  position: relative;
+  left: 10px;
+}
+
+.screen__title {
+  &::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: $main-color;
+    position: absolute;
+    top: 4px;
+    left: 13px;
+  }
+}
+
+.screen__phone,
+.socials {
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+.screen__phone {
+  &:hover {
+    color: $main-color;
+  }
+}
+
+
