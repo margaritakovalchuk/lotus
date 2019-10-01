@@ -44,14 +44,15 @@ img {
 }
 
 .screen_height {
-    height: calc(100vh - 100px);
-    display: flex; /*TODO*/
-    flex-direction: column; /*TODO*/
+    /*height: calc(100vh - 100px);*/
+    padding-top: 50px;
+    padding-bottom: 15px;
 }
 
 .main-content {
     flex: 1;
     margin-bottom: 30px;
+    height: calc(100vh - 155px);
 }
 
 .fas {
@@ -72,7 +73,7 @@ img {
 
 /*welcome-screen*/
 .header_main {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
 }
 
 .nav__item,
@@ -595,3 +596,5 @@ input[type="tel"] {
 .contact__review:hover {
     color: #f78e6a;
 }
+
+/**************************************************************/
