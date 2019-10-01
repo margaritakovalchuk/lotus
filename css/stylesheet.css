@@ -427,6 +427,7 @@ input[type="tel"] {
     font-size: 13px;
 }
 
+
 .switcher__item_trainer:first-child::before {
     content: 'Trainer —';
     left: -61px;
@@ -435,7 +436,6 @@ input[type="tel"] {
 .info__title_black {
     color: #000000;
 }
-
 /*.yogi-person_bgc::after { !*TODO*!*/
 /*    content: "";*
 /*    position: absolute;*/

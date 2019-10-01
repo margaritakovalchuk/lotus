@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     autoPrefix = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
-    sourcemaps  = require('gulp-sourcemaps');
+    sourcemaps  = require('gulp-sourcemaps'),
+    pug = require('gulp-pug');
 
 function sass() {
     return gulp
@@ -24,6 +25,13 @@ function sync() {
     });
     gulp.watch('src/sass/**/*', gulp.series(sass));
     gulp.watch("*.html").on('change', browserSync.reload);
+}
+
+function buildHTML() {
+    return gulp
+        .src('src/pug/**/*.pug')
+        .pipe(gulp.dest('./dist/html'))
+        .pipe(pug());
 }
 
 exports.sass = gulp.series(sass);

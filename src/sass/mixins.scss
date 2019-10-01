@@ -1,0 +1,55 @@
+@import "../../css/fonts.css";
+@import "../sass/variables.scss";
+
+
+@mixin flex-col-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin icon-fontawesome {
+  font-family: 'FontAwesome', Arial, sans-serif;
+  color: #ffffff;
+  font-style: normal;
+}
+
+@mixin text-gradient_top {
+  background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin text-gradient_right {
+  background: linear-gradient(to right, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin button_main {
+  background: $gradient-top;
+  color: $white-color;
+  border-radius: 100%;
+  text-align: center;
+}
+
+@mixin button_main_hover {
+  background: $white-color;
+  color: $main-color;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+@mixin button_small {
+  @include button_main();
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+@mixin button_small_hover {
+  @include button_main_hover();
+}
+
+//@mixin button_big_hover {
+//  background: $white-color;
+//  color: $main-color;
+//  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+//}

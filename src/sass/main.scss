@@ -1,86 +1,7 @@
 @import "../../css/fonts.css";
-
-$main-color: #f78e6a;
-$complementary-color: #f9f5f4;
-$text-color: #000000;
-
-@mixin flex-col-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin icon-fontawesome {
-  font-family: 'FontAwesome', Arial, sans-serif;
-  color: #ffffff;
-  font-style: normal;
-}
-
-@mixin text-gradient_top {
-  background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/*specification*/
-button {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-a {
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-p,
-a,
-span {
-  color: $text-color;
-}
-
-p {
-  margin-bottom: 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-.screen {
-  background-color: $complementary-color;
-  width: 100%;
-  height: 100vh;
-  font-family: Geometria, Arial, sans-serif;
-  @include flex-col-center;
-
-  &_height {
-    height: calc(100vh - 100px);
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.main-content {
-  flex: 1;
-  margin-bottom: 30px;
-}
-
-.lotos {
-  width: 50%;
-}
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+@import "../sass/globals.scss";
 
 /*welcome-screen*/
 
@@ -93,7 +14,7 @@ img {
 .screen__phone { /*TODO*/
   font-size: 12px;
   font-family: Geometria, Arial, sans-serif;
-  line-height: 12px;
+  line-height: $line-height;
 }
 
 .navbar_position-absolute,
@@ -111,6 +32,7 @@ img {
 .nav__item {
   margin-bottom: 16px;
   margin-left: 36px;
+  padding: 0;
 
   &hover .nav__link {
     color: $main-color;
@@ -145,7 +67,7 @@ img {
   margin: 0;
   top: 24px;
   transform: rotate(180deg);
-  line-height: 1;
+  line-height: $line-height;
   left: 13px;
 }
 
@@ -153,9 +75,37 @@ img {
   @include text-gradient_top; /*TODO*/
   font-size: 135px;
   font-family: "Geometria-Medium", Arial, sans-serif;
-  line-height: 135px;
+  line-height: $line-height;
   position: relative;
   left: -10px;
+}
+
+.invitation__title {
+  font-size: 14px;
+}
+
+.invitation__title::before, /*TODO*/
+.next-page__title::after {
+  @include button_small();
+}
+
+.invitation__title {
+  &::before {
+    content: "+";
+    width: 43px;
+    height: 43px;
+    color: $white-color;
+    font-size: 32px;
+    line-height: 42px;
+    background-image: $gradient-top;
+    position: absolute;
+    left: -55px;
+  }
+}
+
+.invitation__info > .invitation__title:hover::before, /*TODO*/
+.next-page > .next-page__title:hover::after {
+  @include button_main_hover;
 }
 
 .screen__title li {
@@ -176,6 +126,25 @@ img {
   }
 }
 
+.pager-current,
+.pager-last {
+  @include text-gradient_top();
+  color: $main-color;
+  line-height: 24px;
+  font-family: Geometria-Light, Arial, sans-serif;
+}
+
+.pager {
+  &-current {
+    font-size: 48px;
+  }
+
+  &-last {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+}
+
 .screen__phone,
 .socials {
   font-family: Montserrat, Arial, sans-serif;
@@ -187,4 +156,356 @@ img {
   }
 }
 
+.socials,
+.next-page {
+  line-height: 24px;
+}
 
+.social__link {
+  margin-right: 10px;
+  font-size: 8px;
+
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.next-page__title {
+  font-size: 11px;
+}
+
+.next-page__title::after,
+.schedule__download,
+.contact__map::before,
+.contact__review::before {
+  content: '\25bc';
+  @include button_main();
+  font-size: 8px;
+  margin-left: 5px;
+}
+
+/*classes-screen*/
+.info {
+  position: relative;
+  top: 75px;
+}
+
+.switcher-wrapper {
+  top: 75px;
+}
+
+.switcher {
+  position: relative;
+}
+
+.switcher__item {
+  font-size: 12px;
+  line-height: 28px;
+  color: #666666;
+
+  &_active {
+    color: $text-color;
+    font-weight: 700;
+  }
+}
+
+.switcher__item:first-child::before,
+.switcher__link:hover,
+.info__title {
+  color: $main-color;
+}
+
+.switcher__item {
+  &:first-child::before {
+    content: 'Yoga —';
+    position: absolute;
+    left: -51px;
+  }
+}
+
+.info__title {
+  font-size: 34px;
+  line-height: $line-height;
+  margin-bottom: 10px;
+}
+
+.info__subtitle {
+  margin-bottom: 30px;
+}
+
+.info__description {
+  font-size: 12px;
+  line-height: 23px;
+
+  &:first-child {
+    margin-bottom: 18px;
+  }
+
+  &:last-child {
+    margin-bottom: 16px;
+  }
+}
+
+.button__sign-in,
+.button__item {
+  color: $white-color;
+  line-height: 11px;
+}
+
+.button__sign-in {
+  font-size: 11px;
+  padding: 15px 35px 15px 55px;
+  border-radius: 21px;
+  background-color: $main-color;
+  position: relative;
+  border: none;
+}
+
+.button__item {
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 100%;
+  padding: 15px;
+  background-image: $gradient-right;
+}
+
+.button__sign-in:hover {
+  color: rgba(252, 102, 162, 1);
+  @include button_main_hover();
+}
+
+/*trial-screen*/
+.discount,
+.registry {
+  font-family: Geometria-Light, Arial, sans-serif;
+}
+
+.registry-input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.discount__details {
+  font-size: 33px;
+  line-height: 38px;
+  margin-bottom: 27px;
+}
+
+.discount__amount {
+  font-size: 55px;
+  @include text-gradient_right();
+}
+
+.discount__intro {
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="tel"] {
+  font-size: 11px;
+  width: 300px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #c9c4c3;
+  padding: 12px 0;
+  margin-bottom: 5px;
+
+  &[type="text"]:focus,
+  &[type="tel"] {
+    margin-bottom: 30px;
+
+    &:focus {
+      border-bottom: 1px solid #000000;
+      color: $text-color;
+    }
+  }
+}
+
+.discount__agreement {
+  font-size: 11px;
+}
+
+.alert__notification {
+  position: absolute;
+}
+
+.alert__thanks {
+  font-size: 52px;
+}
+
+.alert__details {
+  font-size: 13px;
+}
+
+/*trainers screen*/
+.switcher__item_trainer {
+  &:first-child::before {
+    content: 'Trainer —';
+    left: -61px;
+  }
+}
+
+.info__title {
+  &_black {
+    color: $text-color;
+  }
+}
+
+/*subscription-screen*/
+.prices__list {
+  margin-bottom: 30px;
+}
+
+.price__wrapper {
+  margin-right: 3px;
+}
+
+.price__card {
+  width: 43%;
+  padding: 26px 10px 26px 25px;
+  display: flex;
+  justify-content: space-between;
+  margin: 1px;
+  background-color: $white-color;
+}
+
+.price__title,
+.price__item {
+  font-size: 12px;
+  font-family: Geometria-Light, Arial, sans-serif;
+}
+
+.price {
+  font-size: 16px;
+  font-family: Geometria-Bold, Arial, sans-serif;
+  color: #f78e6a;
+}
+
+.price__button {
+  border-radius: 100%;
+  position: static;
+  padding: 9px;
+  align-self: center;
+  background: #f9f5f4;
+
+  &:hover,
+  &_active {
+    background-image: $gradient-right;
+  }
+}
+
+/*schedule screen*/
+.schedule__table {
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+.schedule__title,
+.schedule__title_bold {
+  font-size: 10px;
+  font-family: Geometria-Light, Arial, sans-serif;
+  background-color: $white-color;
+  color: $text-color;
+  line-height: 11px;
+  padding: 20px 10px;
+  max-width: 133px; /*TODO*/
+  text-align: center;
+}
+
+.schedule__title {
+
+  &_bold {
+    font-family: Geometria-Bold, Arial, sans-serif;
+    color: $main-color;
+  }
+
+  &_download {
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    &:hover {
+      background: $gradient-top;
+    }
+
+    &:hover .schedule__text {
+      color: $white-color;
+    }
+
+    &:hover .schedule__download {
+      background: $white-color;
+    }
+
+    &:hover .fa-arrow-down {
+      color: $main-color;
+    }
+  }
+}
+
+.schedule__download {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+/*clients screen*/
+.switcher__item_client {
+
+  &:first-child::before {
+    content: 'Clients —';
+    left: -61px;
+  }
+}
+
+.clients-screen .info__title {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.clients-screen .info__subtitle {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+/*contacts-screen*/
+.google-map {
+  width: 600px;
+  height: 450px;
+}
+
+.contact_small,
+.contact__map,
+.contact__review {
+  font-size: 12px;
+}
+
+.contact__address {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contact__map::before,
+.contact__review::before {
+  border-radius: 100%;
+  font-size: 12px;
+  margin-left: 0;
+  margin-right: 5px;
+  font-family: FontAwesome, Arial, sans-serif;
+  padding: 6px;
+}
+
+.contact__map::before {
+  content: '\f041';
+  padding: 6px 8px;
+}
+
+.contact__review::before {
+  content: '\f003';
+}
+
+.contact__map:hover,
+.contact__review:hover {
+  color: $main-color;
+}
