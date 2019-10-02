@@ -95,6 +95,7 @@
     background-image: $gradient-top;
     position: absolute;
     left: -55px;
+    font-family: Geometria, Arial, sans-serif;
   }
 }
 
@@ -125,7 +126,7 @@
 .pager-last {
   @include text-gradient_top();
   color: $main-color;
-  line-height: 24px;
+  line-height: 42px;
   font-family: Geometria-Light, Arial, sans-serif;
 }
 
@@ -343,6 +344,10 @@ input[type="tel"] {
   }
 }
 
+.trainers-screen .yogi-person {
+  right: 50px;
+}
+
 .info__title {
   &_black {
     color: $text-color;
@@ -430,8 +435,9 @@ input[type="tel"] {
       color: $white-color;
     }
 
-    &:hover .schedule__download {
+    &:hover .schedule__download::before {
       background: $white-color;
+      color: $main-color;
     }
 
     &:hover .fa-arrow-down {
@@ -445,6 +451,14 @@ input[type="tel"] {
   margin-right: 15px;
 }
 
+.schedule__download {
+  &::before {
+    content: '\f063';
+    @include button_small();
+    padding: 6px;
+  }
+}
+
 /*clients screen*/
 .switcher__item_client {
 
@@ -452,6 +466,13 @@ input[type="tel"] {
     content: 'Clients —';
     left: -61px;
   }
+}
+
+.clients-screen .yogi-person {
+  position: absolute;
+  right: -5px;
+  max-height: 480px;
+  top: 40px;
 }
 
 .clients-screen .info__title {

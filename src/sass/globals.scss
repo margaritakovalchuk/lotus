@@ -72,3 +72,8 @@ input {
 .lotos {
   width: 50%;
 }
+
+i[class*="fa-"] {
+  font-family: FontAwesome;
+  font-style: normal;
+}

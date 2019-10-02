@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     autoPrefix = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
-    sourcemaps  = require('gulp-sourcemaps'),
+    sourcemaps = require('gulp-sourcemaps'),
     pug = require('gulp-pug');
 
 function sass() {
@@ -17,6 +17,13 @@ function sass() {
         .pipe(browserSync.stream());
 }
 
+function buildHTML() {
+    return gulp
+        .src('src/pug/**/*.pug')
+        .pipe(pug())
+        .pipe(gulp.dest('./dist/html'));
+}
+
 function sync() {
     browserSync.init({
         server: {
@@ -24,15 +31,12 @@ function sync() {
         }
     });
     gulp.watch('src/sass/**/*', gulp.series(sass));
+    gulp.watch('src/pug/**/*.pug', gulp.series(buildHTML));
     gulp.watch("*.html").on('change', browserSync.reload);
 }
 
-function buildHTML() {
-    return gulp
-        .src('src/pug/**/*.pug')
-        .pipe(gulp.dest('./dist/html'))
-        .pipe(pug());
-}
 
+exports.pug = gulp.series(buildHTML);
 exports.sass = gulp.series(sass);
 exports.build = gulp.series(sync);
+
