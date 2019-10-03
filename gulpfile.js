@@ -19,9 +19,12 @@ function sass() {
 
 function buildHTML() {
     return gulp
-        .src('src/pug/**/*.pug')
-        .pipe(pug())
-        .pipe(gulp.dest('./dist/html'));
+        .src('./src/pug/**/*.pug')
+        .pipe(pug({
+            pretty: true,
+        }))
+        .pipe(gulp.dest('./dist'))
+        .pipe(browserSync.stream());
 }
 
 function sync() {
@@ -30,9 +33,9 @@ function sync() {
             baseDir: "./"
         }
     });
-    gulp.watch('src/sass/**/*', gulp.series(sass));
-    gulp.watch('src/pug/**/*.pug', gulp.series(buildHTML));
-    gulp.watch("*.html").on('change', browserSync.reload);
+    gulp.watch('./src/sass/**/*', gulp.series(sass));
+    gulp.watch('./src/pug/**/*.pug', gulp.series(buildHTML));
+    gulp.watch("./dist/**/*.html").on('change', browserSync.reload);
 }
 
 
