@@ -4,42 +4,62 @@ var gulp = require('gulp'),
     autoPrefix = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
     sourcemaps = require('gulp-sourcemaps'),
-    pug = require('gulp-pug');
+    pug = require('gulp-pug'),
+    del = require('del');
+
+var path = {
+    baseDir: './dist',
+    css: {
+        src: './src/sass',
+        dist: './dist/css',
+    },
+    html: {
+        src: './src/pug',
+        dist: './dist',
+    },
+};
 
 function sass() {
     return gulp
-        .src('./src/sass/**/*.scss')
+        .src(path.css.src + '/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(gulpSass().on('error', gulpSass.logError))
+        .pipe(sourcemaps.write())
         // .pipe(cleanCSS())
         .pipe(autoPrefix())
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest(path.css.dist))
         .pipe(browserSync.stream());
 }
 
 function buildHTML() {
     return gulp
-        .src('./src/pug/**/*.pug')
+        .src(path.html.src + '/**/*.pug')
         .pipe(pug({
             pretty: true,
         }))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest(path.html.dist))
         .pipe(browserSync.stream());
 }
 
 function sync() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: path.baseDir,
         }
     });
-    gulp.watch('./src/sass/**/*', gulp.series(sass));
-    gulp.watch('./src/pug/**/*.pug', gulp.series(buildHTML));
-    gulp.watch("./dist/**/*.html").on('change', browserSync.reload);
+    gulp.watch(path.css.src + '/**/*', gulp.series(sass));
+    gulp.watch(path.html.src + '/**/*.pug', gulp.series(buildHTML));
+    gulp.watch(path.html.dist + '/**/*.html').on('change', browserSync.reload);
 }
 
+function clean () {
+    return del([
+        path.css.dist,
+        path.html.dist,
+    ]);
+}
 
 exports.pug = gulp.series(buildHTML);
 exports.sass = gulp.series(sass);
-exports.build = gulp.series(sync);
 
+exports.build = gulp.series(clean, gulp.parallel(sass, buildHTML), sync);
