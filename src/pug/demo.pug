@@ -14,13 +14,7 @@ html(lang="ru")
         title Lotos
     body
         section.screen
-            .screen_height
-                .container
-                    include header.pug
-                    .main-content
-                        .row.align-items-center
-                            .col-md-1
-                                img.lotos(src=path+"img/lotos.png" alt="lotos")
+            include structure.pug
                             .col-md-4
                                 .wrapper.wrapper__yogi-person
                                     img.yogi-person(src=path+"img/screen-01.png" alt="Yoga-person")
@@ -39,13 +33,7 @@ html(lang="ru")
                                         p.pager-last - 08
                     include footer.pug
         section.screen.classes-screen
-            .screen_height
-                .container
-                    include header.pug
-                    .main-content
-                        .row.align-items-center.position-relative
-                            .col-md-1
-                                img.lotos(src=path+"img/lotos.png" alt="lotos")
+            include structure.pug
                             .col-md-2.align-self-start.switcher-wrapper
                                 ul.switcher
                                     li.switcher__item.switcher__item_active: a.switcher__link(href="#") Для начинающих
@@ -80,13 +68,7 @@ html(lang="ru")
                                         p.pager-last - 08
                     include footer.pug
         section.screen.trial-screen
-            .screen_height
-                .container
-                    include header.pug
-                    .main-content
-                        .row.align-items-center
-                            .col-md-1
-                                img.lotos(src=path + "img/lotos.png" alt="lotos")
+            include structure.pug
                             .col-md-4
                                 .wrapper.wrapper__yogi-person
                                     img.yogi-person(src=path + "img/screen-03.png" alt="Yoga-person")
@@ -116,13 +98,7 @@ html(lang="ru")
                                     .col-md-12
                                         p.pager-last - 08
         section.screen.trainers-screen
-            .screen_height
-                .container
-                    include header.pug
-                    .main-content
-                        .row.align-items-center.position-relative
-                            .col-md-1
-                                img.lotos(src=path + "img/lotos.png" alt="lotos")
+            include structure.pug
                             .col-md-2.align-self-start.switcher-wrapper
                                 ul.switcher
                                     li.switcher__item.switcher__item_active: a.switcher__link(href="#") Максим Казаков
@@ -225,13 +201,7 @@ html(lang="ru")
                     include footer.pug
 
         section.screen.schedule-screen
-            .screen_height
-                .container
-                    include header.pug
-                    .main-content
-                        .row.align-items-center
-                            .col-md-1
-                                img.lotos(src=path + "img/lotos.png" alt="lotos")
+            include structure.pug
                             .col-md-10.schedule
                                 table.schedule__table
                                     tr
@@ -308,13 +278,7 @@ html(lang="ru")
                                         p.pager-last - 08
                     include footer.pug
         section.screen.clients-screen
-            .screen_height
-                .container
-                    include header.pug
-                    .main-content
-                        .row.align-items-center.position-relative
-                            .col-md-1
-                                img.lotos(src=path + "img/lotos.png" alt="lotos")
+            include structure.pug
                             .col-md-2.align-self-start.switcher-wrapper
                                 ul.switcher
                                     li.switcher__item: a.switcher__link(href="#") Жанна Блиц
@@ -355,13 +319,7 @@ html(lang="ru")
                                         p.pager-last - 08
                     include footer.pug
         section.screen.contacts-screen
-            .screen_height
-                .container
-                    include header.pug
-                    .main-content
-                        .row.align-items-center.position-relative
-                            .col-md-1
-                                img.lotos(src=path + "img/lotos.png" alt="lotos")
+            include structure.pug
                             .col-md-7.google-map#map
                             .col-md-3.contact
                                 p.contact_small Адрес:
