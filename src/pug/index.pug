@@ -1,4 +1,4 @@
-extends demo.pug
+extends includes/_demo.pug
 
 block current-screen
     ul.screen__title
@@ -12,5 +12,5 @@ block next-screen
 
 block main-button
     button.button__sign-in
-        span.button__item
+        span.button__item #{button_content}
 

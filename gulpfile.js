@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     sourcemaps = require('gulp-sourcemaps'),
     pug = require('gulp-pug'),
-    del = require('del');
+    del = require('del'),
+    imgmin = require('gulp-imagemin');
 
 var path = {
     baseDir: './dist',
@@ -17,6 +18,10 @@ var path = {
         src: './src/pug',
         dist: './dist',
     },
+    img: {
+        src: './src/img/*',
+        dist: './dist/img',
+    }
 };
 
 function sass() {
@@ -52,8 +57,16 @@ function sync() {
     gulp.watch(path.html.dist + '/**/*.html').on('change', browserSync.reload);
 }
 
+function minimizeImages() {
+    return gulp
+        .src(path.img.src)
+        .pipe(imgmin())
+        .pipe(gulp.dest(path.img.dist));
+}
+
 function clean () {
     return del([
+        '!dist/img',
         path.css.dist,
         path.html.dist,
     ]);
@@ -61,5 +74,5 @@ function clean () {
 
 exports.pug = gulp.series(buildHTML);
 exports.sass = gulp.series(sass);
-
-exports.build = gulp.series(clean, gulp.parallel(sass, buildHTML), sync);
+exports.img = gulp.series(minimizeImages);
+exports.build = gulp.series(clean, minimizeImages, gulp.parallel(sass, buildHTML), sync);

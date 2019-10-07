@@ -1,4 +1,4 @@
-include config.pug
+include _config.pug
 
 doctype html
 html(lang="ru")
@@ -11,10 +11,17 @@ html(lang="ru")
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
         link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=cyrillic" rel="stylesheet")
         link(href="css/main.css" rel="stylesheet")
+        link(rel="icon" type="image/png" href=path+"img/favicon-16x10.png" sizes="16x10")
         title Lotos
     body
         section.screen
-            include structure.pug
+            .screen_height
+                .container
+                    include _header.pug
+                    .main-content
+                        .row.align-items-center
+                            .col-md-1
+                                img.lotos(src=path + "img/lotos.png" alt="lotos")
                             .col-md-4
                                 .wrapper.wrapper__yogi-person
                                     img.yogi-person(src=path+"img/screen-01.png" alt="Yoga-person")
@@ -31,9 +38,15 @@ html(lang="ru")
                                         p.pager-current 01
                                     .col-md-12
                                         p.pager-last - 08
-                    include footer.pug
+                    include _footer.pug
         section.screen.classes-screen
-            include structure.pug
+            .screen_height
+                .container
+                    include _header.pug
+                    .main-content
+                        .row.align-items-center
+                            .col-md-1
+                                img.lotos(src=path + "img/lotos.png" alt="lotos")
                             .col-md-2.align-self-start.switcher-wrapper
                                 ul.switcher
                                     li.switcher__item.switcher__item_active: a.switcher__link(href="#") Для начинающих
@@ -66,9 +79,15 @@ html(lang="ru")
                                         p.pager-current 02
                                     .col-md-12
                                         p.pager-last - 08
-                    include footer.pug
+                    include _footer.pug
         section.screen.trial-screen
-            include structure.pug
+            .screen_height
+                .container
+                    include _header.pug
+                    .main-content
+                        .row.align-items-center
+                            .col-md-1
+                                img.lotos(src=path + "img/lotos.png" alt="lotos")
                             .col-md-4
                                 .wrapper.wrapper__yogi-person
                                     img.yogi-person(src=path + "img/screen-03.png" alt="Yoga-person")
@@ -97,8 +116,15 @@ html(lang="ru")
                                         p.pager-current 03
                                     .col-md-12
                                         p.pager-last - 08
+                    include _footer.pug
         section.screen.trainers-screen
-            include structure.pug
+            .screen_height
+                .container
+                    include _header.pug
+                    .main-content
+                        .row.align-items-center
+                            .col-md-1
+                                img.lotos(src=path + "img/lotos.png" alt="lotos")
                             .col-md-2.align-self-start.switcher-wrapper
                                 ul.switcher
                                     li.switcher__item.switcher__item_active: a.switcher__link(href="#") Максим Казаков
@@ -133,11 +159,11 @@ html(lang="ru")
                                         p.pager-current 04
                                     .col-md-12
                                         p.pager-last - 08
-                    include footer.pug
+                    include _footer.pug
         section.screen.subscription-screen
             .screen_height
                 .container
-                    include header.pug
+                    include _header.pug
                     .main-content
                         .row.align-items-center.position-relative
                             .col-md-1
@@ -190,7 +216,7 @@ html(lang="ru")
                                                 |  руб.
                                         button.price__button.price__button_active.button__item +
                                 button.button__sign-in
-                                    span.button__item &#128504;
+                                    span.button__item  &#128504;
                                     | Заказать абонемент
                             .col-md-1
                                 .row.pager.text-right
@@ -198,10 +224,16 @@ html(lang="ru")
                                         p.pager-current 05
                                     .col-md-12
                                         p.pager-last - 08
-                    include footer.pug
+                    include _footer.pug
 
         section.screen.schedule-screen
-            include structure.pug
+            .screen_height
+                .container
+                    include _header.pug
+                    .main-content
+                        .row.align-items-center
+                            .col-md-1
+                                img.lotos(src=path + "img/lotos.png" alt="lotos")
                             .col-md-10.schedule
                                 table.schedule__table
                                     tr
@@ -276,9 +308,15 @@ html(lang="ru")
                                         p.pager-current 06
                                     .col-md-12
                                         p.pager-last - 08
-                    include footer.pug
+                    include _footer.pug
         section.screen.clients-screen
-            include structure.pug
+            .screen_height
+                .container
+                    include _header.pug
+                    .main-content
+                        .row.align-items-center
+                            .col-md-1
+                                img.lotos(src=path + "img/lotos.png" alt="lotos")
                             .col-md-2.align-self-start.switcher-wrapper
                                 ul.switcher
                                     li.switcher__item: a.switcher__link(href="#") Жанна Блиц
@@ -317,9 +355,15 @@ html(lang="ru")
                                         p.pager-current 07
                                     .col-md-12
                                         p.pager-last - 08
-                    include footer.pug
+                    include _footer.pug
         section.screen.contacts-screen
-            include structure.pug
+            .screen_height
+                .container
+                    include _header.pug
+                    .main-content
+                        .row.align-items-center
+                            .col-md-1
+                                img.lotos(src=path + "img/lotos.png" alt="lotos")
                             .col-md-7.google-map#map
                             .col-md-3.contact
                                 p.contact_small Адрес:
@@ -353,7 +397,7 @@ html(lang="ru")
                                         p.pager-current 08
                                     .col-md-12
                                         p.pager-last - 08
-                    include footer.pug
+                    include _footer.pug
 
         //Optional JavaScript
         //jQuery first, then Popper.js, then Bootstrap JS
@@ -364,7 +408,7 @@ html(lang="ru")
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
         //Google Maps
-        script(src="js/google-map.js")
+        script(src="src/js/google-map.js")
         script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3gtMPTR8Fio53PXqDu0shXT5LMoI3CJw&callback=initMap")
 
 
