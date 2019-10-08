@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     pug = require('gulp-pug'),
     del = require('del'),
-    imgmin = require('gulp-imagemin');
+    imgmin = require('gulp-imagemin'),
+    eslint = require('gulp-eslint');
 
 var path = {
     baseDir: './dist',
@@ -21,7 +22,15 @@ var path = {
     img: {
         src: './src/img/*',
         dist: './dist/img',
-    }
+    },
+    js: {
+        src: './src/js',
+        dist: './dist/js',
+    },
+    fonts: {
+        src: './src/fonts',
+        dist: './dist/fonts',
+    },
 };
 
 function sass() {
@@ -36,9 +45,9 @@ function sass() {
         .pipe(browserSync.stream());
 }
 
-function buildHTML() {
+function html() {
     return gulp
-        .src(path.html.src + '/**/*.pug')
+        .src(path.html.src + '/*.pug')
         .pipe(pug({
             pretty: true,
         }))
@@ -52,27 +61,38 @@ function sync() {
             baseDir: path.baseDir,
         }
     });
-    gulp.watch(path.css.src + '/**/*', gulp.series(sass));
-    gulp.watch(path.html.src + '/**/*.pug', gulp.series(buildHTML));
+    gulp.watch(path.css.src + '/**/*.scss', gulp.series(sass));
+    gulp.watch(path.html.src + '/**/*.pug', gulp.series(html));
+    gulp.watch(path.js.src + '/**/*.js', gulp.series(js));
     gulp.watch(path.html.dist + '/**/*.html').on('change', browserSync.reload);
 }
 
 function minimizeImages() {
     return gulp
         .src(path.img.src)
-        .pipe(imgmin())
+        // .pipe(imgmin())
         .pipe(gulp.dest(path.img.dist));
 }
 
+
 function clean () {
     return del([
-        '!dist/img',
         path.css.dist,
         path.html.dist,
     ]);
 }
 
-exports.pug = gulp.series(buildHTML);
-exports.sass = gulp.series(sass);
-exports.img = gulp.series(minimizeImages);
-exports.build = gulp.series(clean, minimizeImages, gulp.parallel(sass, buildHTML), sync);
+// TODO use eslint (configure)
+function js () {
+    return gulp.src(path.js.src + '/**/*.js')
+        .pipe(gulp.dest(path.js.dist));
+}
+
+// TODO optimize
+function fonts () {
+    return gulp.src(path.fonts.src + '/**/*')
+        .pipe(gulp.dest(path.fonts.dist));
+}
+
+exports.build = gulp.series(clean, minimizeImages, fonts, gulp.parallel(sass, js, html), sync);
+

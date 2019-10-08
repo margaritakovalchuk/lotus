@@ -1,6 +1,7 @@
 @import "../../libs/font-awesome-4.7.0/scss/font-awesome";
-@import "../../css/fonts.css"; //TODO del
-@import "../sass/mixins.scss";
-@import "../sass/variables.scss";
-@import "../sass/globals.scss";
-@import "../sass/blocks-layout.scss";
+@import "variables.scss";
+@import "fonts.scss";
+@import "mixins.scss";
+
+@import "globals.scss";
+@import "blocks-layout.scss";

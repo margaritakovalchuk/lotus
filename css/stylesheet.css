@@ -227,7 +227,6 @@ img {
 
 .pager-last {
     font-size: 22px;
-    letter-spacing: 2px;
 }
 
 .socials,
@@ -437,6 +436,7 @@ input[type="tel"] {
 .info__title_black {
     color: #000000;
 }
+
 /*.yogi-person_bgc::after { !*TODO*!*/
 /*    content: "";*
 /*    position: absolute;*/
@@ -598,3 +598,4 @@ input[type="tel"] {
 }
 
 /**************************************************************/
+
