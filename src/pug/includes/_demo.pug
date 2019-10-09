@@ -11,6 +11,7 @@ html(lang="ru")
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
         link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=cyrillic" rel="stylesheet")
         link(href="css/main.css" rel="stylesheet")
+        link(rel="stylesheet" type="text/css" href="fullpage.css")
         link(rel="icon" type="image/png" href=path_img + "img/favicon-16x16.png" sizes="16x16")
         title Lotos
     body
@@ -18,32 +19,32 @@ html(lang="ru")
             .section
                 section.screen
                     .screen_height
-
                         .container
-                            include _header.pug
-                            .row.align-items-center
-                                .col-md-12
-                                    .col-md-6.offset-md-6
-                                        block current-screen
-                                .col-md-1.my-auto
-                                    img.lotos(src=path_img + "img/lotos.png" alt="lotos")
-                                .col-md-4
-                                    .wrapper.wrapper__yogi-person
-                                        img.yogi-person(src=path_img + "img/screen-01.png" alt="Yoga-person")
-                                .col-md-5.offset-md-1.title.pl-5
-                                    .row.mb-3
-                                        p.title__description Центр йоги
-                                        p.title__school Lotos
-                                    .row.invitation
-                                        a.col-md-7.offset-md-1.invitation__info.px-1(href="#")
-                                            p.invitation__title Приглашаем вас и ваших друзей на бесплатное пробное занятие
-                                .col-md-1
-                                    .row.pager.text-right
-                                        .col-md-12.mb-2
-                                            p.pager-current 01
-                                        .col-md-12
-                                            p.pager-last - 08
-                                include _footer.pug
+                            .main-content.position-relative
+                                include _header.pug
+                                .row.align-items-center
+                                    .col-md-12
+                                        .col-md-6.offset-md-6
+                                            block current-screen
+                                    .col-md-1.my-auto
+                                        img.lotos(src=path_img + "img/lotos.png" alt="lotos")
+                                    .col-md-4
+                                        .wrapper.wrapper__yogi-person
+                                            img.yogi-person(src=path_img + "img/screen-01.png" alt="Yoga-person")
+                                    .col-md-5.offset-md-1.title.pl-5
+                                        .row.mb-3
+                                            p.title__description Центр йоги
+                                            p.title__school Lotos
+                                        .row.invitation
+                                            a.col-md-7.offset-md-1.invitation__info.px-1(href="#")
+                                                p.invitation__title Приглашаем вас и ваших друзей на бесплатное пробное занятие
+                                    .col-md-1
+                                        .row.pager.text-right
+                                            .col-md-12
+                                                p.pager-current 01
+                                            .col-md-12
+                                                p.pager-last - 08
+                                    include _footer.pug
             .section
                 section.screen.classes-screen
                     .screen_height
@@ -83,7 +84,7 @@ html(lang="ru")
                                             | Записаться онлайн
                                     .col-md-1
                                         .row.pager.text-right
-                                            .col-md-12.mb-2
+                                            .col-md-12
                                                 p.pager-current 02
                                             .col-md-12
                                                 p.pager-last - 08
@@ -123,7 +124,7 @@ html(lang="ru")
                                         p.alert__details Мы свяжемся с вами в течение 15 минут...
                                     .col-md-1.offset-md-1
                                         .row.pager.text-right
-                                            .col-md-12.mb-2
+                                            .col-md-12
                                                 p.pager-current 03
                                             .col-md-12
                                                 p.pager-last - 08
@@ -169,7 +170,7 @@ html(lang="ru")
                                             | Записаться к тренеру
                                     .col-md-1
                                         .row.pager.text-right
-                                            .col-md-12.mb-2
+                                            .col-md-12
                                                 p.pager-current 04
                                             .col-md-12
                                                 p.pager-last - 08
@@ -237,7 +238,7 @@ html(lang="ru")
                                             | Заказать абонемент
                                     .col-md-1
                                         .row.pager.text-right
-                                            .col-md-12.mb-2
+                                            .col-md-12
                                                 p.pager-current 05
                                             .col-md-12
                                                 p.pager-last - 08
@@ -323,7 +324,7 @@ html(lang="ru")
                                                 td.schedule__title Кундалини йога
                                     .col-md-1
                                         .row.pager.text-right
-                                            .col-md-12.mb-2
+                                            .col-md-12
                                                 p.pager-current 06
                                             .col-md-12
                                                 p.pager-last - 08
@@ -373,7 +374,7 @@ html(lang="ru")
                                             | Попробовать тоже
                                     .col-md-1.my-auto
                                         .row.pager.text-right
-                                            .col-md-12.mb-2
+                                            .col-md-12
                                                 p.pager-current 07
                                             .col-md-12
                                                 p.pager-last - 08
@@ -418,20 +419,28 @@ html(lang="ru")
                                             | вы даете согласие на обработку своих персональных данных
                                     .col-md-1
                                         .row.pager.text-right
-                                            .col-md-12.mb-2
+                                            .col-md-12
                                                 p.pager-current 08
                                             .col-md-12
                                                 p.pager-last - 08
                                     include _footer.pug
-        script(src=path_js + "js/fullpage.js")
-        //Optional JavaScript
-        //jQuery first, then Popper.js, then Bootstrap JS
-        script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
-        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+
+            <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+            script(src=path_js +"js/easings.min.js")
+
+            <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+            script(type="text/javascript" src=path_js +"js/scrolloverflow.min.js")
+
+            script(src=path_js + "js/fullpage.js")
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
         //Google Maps
         script(src=path_js + "js/google-map.js")
         script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3gtMPTR8Fio53PXqDu0shXT5LMoI3CJw&callback=initMap")

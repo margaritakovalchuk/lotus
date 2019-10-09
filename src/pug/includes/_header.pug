@@ -1,17 +1,16 @@
-.header-wrapper
-    header.header_main
-        .row
-            .col-md-1
-                svg(class="nav__burger" width="16px" height="13px")
-                    line(x1="0" y1="1" x2="2" y2="1" stroke="#000000" fill="transparent" stroke-width="1")
-                    line(x1="4" y1="1" x2="16" y2="1" stroke="#f78e6a" fill="transparent" stroke-width="1")
-                    line(x1="0" y1="6" x2="2" y2="6" stroke="#000000" fill="transparent" stroke-width="1")
-                    line(x1="4" y1="6" x2="16" y2="6" stroke="#f78e6a" fill="transparent" stroke-width="1")
-                    line(x1="0" y1="12" x2="2" y2="12" stroke="#000000" fill="transparent" stroke-width="1")
-                    line(x1="4" y1="12" x2="13" y2="12" stroke="#f78e6a" fill="transparent" stroke-width="1")
+header
+    .header-wrapper
+        .header-wrapper-inner
                 nav.navbar.navbar_position-absolute
-                    button.navbar-toggler.nav__item(data-toggle="collapse" data-target="#navbarCollapse") Меню
-                    .collapse.navbar-collapse#navbarCollapse1
+                    svg(class="nav__burger" width="16px" height="13px")
+                        line(x1="0" y1="1" x2="2" y2="1" stroke="#000000" fill="transparent" stroke-width="1")
+                        line(x1="4" y1="1" x2="16" y2="1" stroke="#f78e6a" fill="transparent" stroke-width="1")
+                        line(x1="0" y1="6" x2="2" y2="6" stroke="#000000" fill="transparent" stroke-width="1")
+                        line(x1="4" y1="6" x2="16" y2="6" stroke="#f78e6a" fill="transparent" stroke-width="1")
+                        line(x1="0" y1="12" x2="2" y2="12" stroke="#000000" fill="transparent" stroke-width="1")
+                        line(x1="4" y1="12" x2="13" y2="12" stroke="#f78e6a" fill="transparent" stroke-width="1")
+                    button.navbar-toggler.nav__item(data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="true") Меню
+                    .collapse.navbar-collapse#navbarCollapse
                         ul.navbar-nav
                             li.nav__item: a.nav__link.nav__link_active(href="#") Главная
                             li.nav__item: a.nav__link(href="#") Преподаватели
@@ -19,6 +18,4 @@
                             li.nav__item: a.nav__link(href="#") Расписание
                             li.nav__item: a.nav__link(href="#") Отзывы
                             li.nav__item: a.nav__link(href="#") Контакты
-            .col-md-2.offset-10
-                a.screen__phone.text-right.d-block(href="tel:+78123455697") +7 (812) 345-56-97
-
+                .header__phone.d-none

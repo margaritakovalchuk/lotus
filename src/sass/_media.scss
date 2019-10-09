@@ -1,0 +1,15 @@
+@media (min-width: 1200px) {
+  .pager-current {
+    margin-bottom: 3px;
+  }
+}
+
+@media (min-width: 992px)and (max-width: 1199px) {
+.pager-current {
+  font-size: 38px;
+}
+  .pager-last {
+    font-size: 18px;
+    line-height: 33px;
+  }
+}

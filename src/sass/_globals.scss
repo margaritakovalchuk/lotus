@@ -54,15 +54,46 @@ input {
 }
 
 .main-content {
-  flex: 1;
-  margin-bottom: 30px;
   height: calc(100vh - 155px);
-  display: flex;
+}
+
+header {
+  position: absolute;
 }
 
 .header-wrapper {
+  display: flex;
+}
+
+.header-wrapper-inner {
   position: fixed;
   z-index: 100;
+}
+
+.navbar_position-absolute,
+.nav__burger {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.navbar_position-absolute {
+  padding: 0;
+  z-index: 9999;
+}
+
+.nav__item {
+  margin-bottom: 16px;
+  margin-left: 36px;
+  padding: 0;
+
+  &hover .nav__link[href] {
+    color: $main-color;
+  }
+}
+
+.nav__link_active {
+  color: $main-color;
 }
 
 .lotos {

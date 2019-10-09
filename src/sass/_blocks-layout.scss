@@ -7,32 +7,6 @@
   line-height: $line-height;
 }
 
-.navbar_position-absolute,
-.nav__burger {
-  position: absolute;
-  left: 15px;
-}
-
-.navbar_position-absolute {
-  top: 0;
-  padding: 0;
-  z-index: 9999;
-}
-
-.nav__item {
-  margin-bottom: 16px;
-  margin-left: 36px;
-  padding: 0;
-
-  &hover .nav__link[href] {
-    color: $main-color;
-  }
-}
-
-.nav__link_active {
-  color: $main-color;
-}
-
 .wrapper__yogi-person {
   display: table;
 }
@@ -102,6 +76,7 @@
 .screen__title li {
   position: relative;
   left: 10px;
+  margin-bottom: 30px;
 }
 
 .screen__title {
