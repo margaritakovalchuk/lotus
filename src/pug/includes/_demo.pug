@@ -11,43 +11,48 @@ html(lang="ru")
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
         link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=cyrillic" rel="stylesheet")
         link(href="css/main.css" rel="stylesheet")
-        link(rel="icon" type="image/png" href=path_img+"img/favicon-16x10.png" sizes="16x10")
+        link(rel="icon" type="image/png" href=path_img + "img/favicon-16x16.png" sizes="16x16")
         title Lotos
     body
         #fullpage
             .section
                 section.screen
                     .screen_height
+
                         .container
                             include _header.pug
-                            .main-content
-                                .row.align-items-center
-                                    .col-md-1
-                                        img.lotos(src=path_img + "img/lotos.png" alt="lotos")
-                                    .col-md-4
-                                        .wrapper.wrapper__yogi-person
-                                            img.yogi-person(src=path_img + "img/screen-01.png" alt="Yoga-person")
-                                    .col-md-5.offset-1.title.pl-5
-                                        .row.mb-3
-                                            p.title__description Центр йоги
-                                            p.title__school Lotos
-                                        .row.invitation
-                                            a.col-md-7.offset-1.invitation__info.px-1(href="#")
-                                                p.invitation__title Приглашаем вас и ваших друзей на бесплатное пробное занятие
-                                    .col-md-1
-                                        .row.pager.text-right
-                                            .col-md-12.mb-2
-                                                p.pager-current 01
-                                            .col-md-12
-                                                p.pager-last - 08
-                            include _footer.pug
+                            .row.align-items-center
+                                .col-md-12
+                                    .col-md-6.offset-md-6
+                                        block current-screen
+                                .col-md-1.my-auto
+                                    img.lotos(src=path_img + "img/lotos.png" alt="lotos")
+                                .col-md-4
+                                    .wrapper.wrapper__yogi-person
+                                        img.yogi-person(src=path_img + "img/screen-01.png" alt="Yoga-person")
+                                .col-md-5.offset-md-1.title.pl-5
+                                    .row.mb-3
+                                        p.title__description Центр йоги
+                                        p.title__school Lotos
+                                    .row.invitation
+                                        a.col-md-7.offset-md-1.invitation__info.px-1(href="#")
+                                            p.invitation__title Приглашаем вас и ваших друзей на бесплатное пробное занятие
+                                .col-md-1
+                                    .row.pager.text-right
+                                        .col-md-12.mb-2
+                                            p.pager-current 01
+                                        .col-md-12
+                                            p.pager-last - 08
+                                include _footer.pug
             .section
                 section.screen.classes-screen
                     .screen_height
                         .container
-                            //include _header.pug
                             .main-content
                                 .row.align-items-center
+                                    .col-md-12
+                                        .col-md-6.offset-md-6
+                                            block current-screen
                                     .col-md-1
                                         img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-2.align-self-start.switcher-wrapper
@@ -60,7 +65,7 @@ html(lang="ru")
                                             li.switcher__item: a.switcher__link(href="#") Терапия
                                     .col-md-3
                                         .wrapper.wrapper__yogi-person
-                                            img.yogi-person(src=path_img+"img/screen-02.png" alt="Yoga-person")
+                                            img.yogi-person(src=path_img + "img/screen-02.png" alt="Yoga-person")
                                     .col-md-5.info.align-self-start
                                         .info__title Yoga —
                                         .info__subtitle Для начинающих
@@ -82,14 +87,16 @@ html(lang="ru")
                                                 p.pager-current 02
                                             .col-md-12
                                                 p.pager-last - 08
-                            include _footer.pug
+                                    include _footer.pug
             .section
                 section.screen.trial-screen
                     .screen_height
                         .container
-                            //include _header.pug
                             .main-content
                                 .row.align-items-center
+                                    .col-md-12
+                                        .col-md-6.offset-md-6
+                                            block current-screen
                                     .col-md-1
                                         img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-5
@@ -111,23 +118,25 @@ html(lang="ru")
                                                 i.button__item.fas.fa-envelope
                                         p.agreement.discount__agreement Нажимая «Отправить заявку»,
                                             | вы даете согласие на обработку своих персональных данных
-                                    .col-md-5.alert__notification.offset-6.d-none
+                                    .col-md-5.alert__notification.offset-md-6.d-none
                                         p.alert__thanks Спасибо
                                         p.alert__details Мы свяжемся с вами в течение 15 минут...
-                                    .col-md-1.offset-1
+                                    .col-md-1.offset-md-1
                                         .row.pager.text-right
                                             .col-md-12.mb-2
                                                 p.pager-current 03
                                             .col-md-12
                                                 p.pager-last - 08
-                            include _footer.pug
+                                    include _footer.pug
             .section
                 section.screen.trainers-screen
                     .screen_height
                         .container
-                            //include _header.pug
                             .main-content
                                 .row.align-items-center
+                                    .col-md-12
+                                        .col-md-6.offset-md-6
+                                            block current-screen
                                     .col-md-1
                                         img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-2.align-self-start.switcher-wrapper
@@ -164,14 +173,16 @@ html(lang="ru")
                                                 p.pager-current 04
                                             .col-md-12
                                                 p.pager-last - 08
-                            include _footer.pug
+                                    include _footer.pug
             .section
                 section.screen.subscription-screen
                     .screen_height
                         .container
-                            //include _header.pug
                             .main-content
                                 .row.align-items-center.position-relative
+                                    .col-md-12
+                                        .col-md-6.offset-md-6
+                                            block current-screen
                                     .col-md-1
                                         img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-5
@@ -230,14 +241,16 @@ html(lang="ru")
                                                 p.pager-current 05
                                             .col-md-12
                                                 p.pager-last - 08
-                            include _footer.pug
+                                    include _footer.pug
             .section
                 section.screen.schedule-screen
                     .screen_height
                         .container
-                            //include _header.pug
                             .main-content
                                 .row.align-items-center
+                                    .col-md-12
+                                        .col-md-6.offset-md-6
+                                            block current-screen
                                     .col-md-1
                                         img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-10.schedule
@@ -314,15 +327,17 @@ html(lang="ru")
                                                 p.pager-current 06
                                             .col-md-12
                                                 p.pager-last - 08
-                            include _footer.pug
+                                    include _footer.pug
             .section
                 section.screen.clients-screen
                     .screen_height
                         .container
-                            //include _header.pug
                             .main-content
-                                .row.align-items-center
-                                    .col-md-1
+                                .row
+                                    .col-md-12
+                                        .col-md-6.offset-md-6
+                                            block current-screen
+                                    .col-md-1.my-auto
                                         img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-2.align-self-start.switcher-wrapper
                                         ul.switcher
@@ -356,20 +371,22 @@ html(lang="ru")
                                         button.button__sign-in
                                             span.button__item +
                                             | Попробовать тоже
-                                    .col-md-1
+                                    .col-md-1.my-auto
                                         .row.pager.text-right
                                             .col-md-12.mb-2
                                                 p.pager-current 07
                                             .col-md-12
                                                 p.pager-last - 08
-                            include _footer.pug
+                                    include _footer.pug
             .section
                 section.screen.contacts-screen
                     .screen_height
                         .container
-                            //include _header.pug
                             .main-content
                                 .row.align-items-center
+                                    .col-md-12
+                                        .col-md-6.offset-md-6
+                                            block current-screen
                                     .col-md-1
                                         img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-7.google-map#map
@@ -388,7 +405,7 @@ html(lang="ru")
                                         button.button__sign-in
                                             span.button__item +
                                             | Записаться онлайн
-                                    //.col-md-3
+                                    .col-md-3.d-none
                                         form.registry
                                             label.sr-only Ваше имя
                                             input(type="text" placeholder="Ваше имя")
@@ -405,7 +422,7 @@ html(lang="ru")
                                                 p.pager-current 08
                                             .col-md-12
                                                 p.pager-last - 08
-                            include _footer.pug
+                                    include _footer.pug
         script(src=path_js + "js/fullpage.js")
         //Optional JavaScript
         //jQuery first, then Popper.js, then Bootstrap JS
