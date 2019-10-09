@@ -199,18 +199,26 @@
   }
 }
 
-.switcher__item:first-child::before,
+.switcher__item_active::before,
 .switcher__link:hover,
 .info__title {
   color: $main-color;
 }
 
-.switcher__item {
-  &:first-child::before {
-    content: 'Yoga —';
-    position: absolute;
-    left: -51px;
-  }
+.switcher__item_active::before {
+  content: 'Yoga —';
+  position: absolute;
+  left: -51px;
+}
+
+.switcher__item_trainer.switcher__item_active::before {
+  content: 'Trainer —';
+  left: -61px;
+}
+
+.switcher__item_client.switcher__item_active::before {
+  content: 'Clients —';
+  left: -61px;
 }
 
 .info__title {
@@ -331,13 +339,6 @@ input[type="tel"] {
 }
 
 /*trainers screen*/
-.switcher__item_trainer {
-  &:first-child::before {
-    content: 'Trainer —';
-    left: -61px;
-  }
-}
-
 .trainers-screen .yogi-person {
   right: 50px;
 }
@@ -454,14 +455,6 @@ input[type="tel"] {
 }
 
 /*clients screen*/
-.switcher__item_client {
-
-  &:first-child::before {
-    content: 'Clients —';
-    left: -61px;
-  }
-}
-
 .clients-screen .yogi-person {
   position: absolute;
   right: -5px;
@@ -520,7 +513,7 @@ input[type="tel"] {
   color: $main-color;
 }
 
-@media (min-width: 768px)and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .pager-current {
     font-size: 40px;
   }

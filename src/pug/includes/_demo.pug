@@ -11,7 +11,7 @@ html(lang="ru")
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
         link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=cyrillic" rel="stylesheet")
         link(href="css/main.css" rel="stylesheet")
-        link(rel="icon" type="image/png" href=pathcss+"img/favicon-16x10.png" sizes="16x10")
+        link(rel="icon" type="image/png" href=path_img+"img/favicon-16x10.png" sizes="16x10")
         title Lotos
     body
         #fullpage
@@ -23,10 +23,10 @@ html(lang="ru")
                             .main-content
                                 .row.align-items-center
                                     .col-md-1
-                                        img.lotos(src=pathcss + "img/lotos.png" alt="lotos")
+                                        img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-4
                                         .wrapper.wrapper__yogi-person
-                                            img.yogi-person(src=pathcss+"img/screen-01.png" alt="Yoga-person")
+                                            img.yogi-person(src=path_img + "img/screen-01.png" alt="Yoga-person")
                                     .col-md-5.offset-1.title.pl-5
                                         .row.mb-3
                                             p.title__description Центр йоги
@@ -49,7 +49,7 @@ html(lang="ru")
                             .main-content
                                 .row.align-items-center
                                     .col-md-1
-                                        img.lotos(src=pathcss + "img/lotos.png" alt="lotos")
+                                        img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-2.align-self-start.switcher-wrapper
                                         ul.switcher
                                             li.switcher__item.switcher__item_active: a.switcher__link(href="#") Для начинающих
@@ -60,7 +60,7 @@ html(lang="ru")
                                             li.switcher__item: a.switcher__link(href="#") Терапия
                                     .col-md-3
                                         .wrapper.wrapper__yogi-person
-                                            img.yogi-person(src=pathcss+"img/screen-02.png" alt="Yoga-person")
+                                            img.yogi-person(src=path_img+"img/screen-02.png" alt="Yoga-person")
                                     .col-md-5.info.align-self-start
                                         .info__title Yoga —
                                         .info__subtitle Для начинающих
@@ -91,10 +91,10 @@ html(lang="ru")
                             .main-content
                                 .row.align-items-center
                                     .col-md-1
-                                        img.lotos(src=pathcss + "img/lotos.png" alt="lotos")
-                                    .col-md-4
+                                        img.lotos(src=path_img + "img/lotos.png" alt="lotos")
+                                    .col-md-5
                                         .wrapper.wrapper__yogi-person
-                                            img.yogi-person(src=pathcss + "img/screen-03.png" alt="Yoga-person")
+                                            img.yogi-person(src=path_img + "img/screen-03.png" alt="Yoga-person")
                                     .col-md-4.discount
                                         p.discount__details
                                             span.discount__amount 10%
@@ -129,10 +129,10 @@ html(lang="ru")
                             .main-content
                                 .row.align-items-center
                                     .col-md-1
-                                        img.lotos(src=pathcss + "img/lotos.png" alt="lotos")
+                                        img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-2.align-self-start.switcher-wrapper
                                         ul.switcher
-                                            li.switcher__item.switcher__item_active: a.switcher__link(href="#") Максим Казаков
+                                            li.switcher__item.switcher__item_active.switcher__item_trainer: a.switcher__link(href="#") Максим Казаков
                                             li.switcher__item: a.switcher__link(href="#") Юлия Зырянова
                                             li.switcher__item: a.switcher__link(href="#") Настя Антипова
                                             li.switcher__item: a.switcher__link(href="#") Ольга Ветрова
@@ -140,7 +140,7 @@ html(lang="ru")
                                             li.switcher__item: a.switcher__link(href="#") Мария Жукова
                                     .col-md-3
                                         .wrapper.wrapper__yogi-person.yogi-person_bgc
-                                            img.yogi-person(src=pathcss + "img/screen-04.png" alt="Yoga-person")
+                                            img.yogi-person(src=path_img + "img/screen-04.png" alt="Yoga-person")
                                     .col-md-5.info.align-self-start
                                         .info__title.info__title_black Максим Казаков
                                         .info__subtitle Преподаватель йоги с 1997 года
@@ -173,10 +173,10 @@ html(lang="ru")
                             .main-content
                                 .row.align-items-center.position-relative
                                     .col-md-1
-                                        img.lotos(src=pathcss + "img/lotos.png" alt="lotos")
+                                        img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-5
                                         .wrapper.wrapper__yogi-person
-                                            img.yogi-person(src=pathcss + "img/screen-05.png" alt="Yoga-person")
+                                            img.yogi-person(src=path_img + "img/screen-05.png" alt="Yoga-person")
                                     .col-md-5.prices
                                         ul.prices__list.d-flex.flex-wrap
                                             li.price__card
@@ -192,35 +192,35 @@ html(lang="ru")
                                                     p.price__item
                                                         span.price 2 000
                                                         |  руб.
-                                                button.price__button.price__button_active.button__item +
+                                                button.price__button.button__item +
                                             li.price__card
                                                 .price__wrapper
                                                     p.price__title 2 месяца занятий
                                                     p.price__item
                                                         span.price 3 500
                                                         |  руб.
-                                                button.price__button.price__button_active.button__item +
+                                                button.price__button.button__item +
                                             li.price__card
                                                 .price__wrapper
                                                     p.price__title 3 месяца занятий
                                                     p.price__item
                                                         span.price 4 500
                                                         |  руб.
-                                                button.price__button.price__button_active.button__item +
+                                                button.price__button.button__item +
                                             li.price__card
                                                 .price__wrapper
                                                     p.price__title Пол года занятий
                                                     p.price__item
                                                         span.price 8 000
                                                         |  руб.
-                                                button.price__button.price__button_active.button__item +
+                                                button.price__button.button__item +
                                             .li.price__card
                                                 .price__wrapper
                                                     p.price__title Год занятий
                                                     p.price__item
                                                         span.price 14 000
                                                         |  руб.
-                                                button.price__button.price__button_active.button__item +
+                                                button.price__button.button__item +
                                         button.button__sign-in
                                             span.button__item  &#128504;
                                             | Заказать абонемент
@@ -239,7 +239,7 @@ html(lang="ru")
                             .main-content
                                 .row.align-items-center
                                     .col-md-1
-                                        img.lotos(src=pathcss + "img/lotos.png" alt="lotos")
+                                        img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-10.schedule
                                         table.schedule__table
                                             tr
@@ -323,22 +323,22 @@ html(lang="ru")
                             .main-content
                                 .row.align-items-center
                                     .col-md-1
-                                        img.lotos(src=pathcss + "img/lotos.png" alt="lotos")
+                                        img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-2.align-self-start.switcher-wrapper
                                         ul.switcher
                                             li.switcher__item: a.switcher__link(href="#") Жанна Блиц
-                                            li.switcher__item.switcher__item_active: a.switcher__link(href="#") Арина Наумова
+                                            li.switcher__item.switcher__item_active.switcher__item_client: a.switcher__link(href="#") Арина Наумова
                                             li.switcher__item: a.switcher__link(href="#") Виталий Коробко
                                             li.switcher__item: a.switcher__link(href="#") Ольга Ветрова
                                             li.switcher__item: a.switcher__link(href="#") Елена Снежная
                                             li.switcher__item: a.switcher__link(href="#") Юлиана Ветрова
                                     .col-md-3
                                         .wrapper.wrapper__yogi-person
-                                            img.yogi-person(src=pathcss + "img/screen-07.png" alt="Yoga-person")
+                                            img.yogi-person(src=path_img + "img/screen-07.png" alt="Yoga-person")
                                     .col-md-5.info.align-self-start
                                         .row.mb-4
                                             .col-md-4
-                                                img.client-photo(src=pathcss + "img/arina_naumova.png" alt="Арина Наумова")
+                                                img.client-photo(src=path_img + "img/arina_naumova.png" alt="Арина Наумова")
                                             .col-md-8.d-flex.flex-column.justify-content-md-end
                                                 .info__title.info__title_black Арина Наумова
                                                 .info__subtitle 34 года
@@ -371,7 +371,7 @@ html(lang="ru")
                             .main-content
                                 .row.align-items-center
                                     .col-md-1
-                                        img.lotos(src=pathcss + "img/lotos.png" alt="lotos")
+                                        img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                                     .col-md-7.google-map#map
                                     .col-md-3.contact
                                         p.contact_small Адрес:
@@ -406,7 +406,7 @@ html(lang="ru")
                                             .col-md-12
                                                 p.pager-last - 08
                             include _footer.pug
-        script(src=pathjs + "js/fullpage.js")
+        script(src=path_js + "js/fullpage.js")
         //Optional JavaScript
         //jQuery first, then Popper.js, then Bootstrap JS
         script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -416,7 +416,7 @@ html(lang="ru")
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
         //Google Maps
-        script(src=pathjs + "js/google-map.js")
+        script(src=path_js + "js/google-map.js")
         script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3gtMPTR8Fio53PXqDu0shXT5LMoI3CJw&callback=initMap")
 
 
