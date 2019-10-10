@@ -12,6 +12,7 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=cyrillic" rel="stylesheet")
         link(href="css/main.css" rel="stylesheet")
         link(rel="stylesheet" type="text/css" href="fullpage.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css")
         link(rel="icon" type="image/png" href=path_img + "img/favicon-16x16.png" sizes="16x16")
         title Lotos
     body
@@ -426,10 +427,10 @@ html(lang="ru")
                                     include _footer.pug
 
             <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
-            script(src=path_js +"js/easings.min.js")
+            script(src=path_js +"js/easings.js")
 
             <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
-            script(type="text/javascript" src=path_js +"js/scrolloverflow.min.js")
+            script(type="text/javascript" src=path_js +"js/scrolloverflow.js")
 
             script(src=path_js + "js/fullpage.js")
 
@@ -441,6 +442,8 @@ html(lang="ru")
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
         script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js")
+        script(src=path_js + "/js/fullpage.js")
         //Google Maps
         script(src=path_js + "js/google-map.js")
         script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3gtMPTR8Fio53PXqDu0shXT5LMoI3CJw&callback=initMap")
