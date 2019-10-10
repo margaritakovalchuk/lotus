@@ -7,12 +7,7 @@
   line-height: $line-height;
 }
 
-.wrapper__yogi-person {
-  display: table;
-}
-
 .yogi-person {
-  display: table-cell;
   height: calc(100vh - 152px);
   width: auto;
 }
