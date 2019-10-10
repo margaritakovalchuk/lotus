@@ -38,6 +38,11 @@ input {
   border: 0 none;
 }
 
+i[class*="fa-"] {
+  font-family: FontAwesome;
+  font-style: normal;
+}
+
 .screen {
   background-color: $complementary-color;
   width: 100%;
@@ -62,11 +67,6 @@ header {
 
 .header-wrapper {
   display: flex;
-}
-
-.header-wrapper-inner {
-  position: fixed;
-  z-index: 100;
 }
 
 .navbar_position-absolute,
@@ -99,7 +99,11 @@ header {
   width: 50%;
 }
 
-i[class*="fa-"] {
-  font-family: FontAwesome;
-  font-style: normal;
+.wrapper__yogi-person {
+  height: calc(100vh - 152px);
+}
+
+.yogi-person {
+  height: calc(100vh - 152px);
+  width: auto;
 }

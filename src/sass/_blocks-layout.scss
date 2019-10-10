@@ -7,11 +7,6 @@
   line-height: $line-height;
 }
 
-.yogi-person {
-  height: calc(100vh - 152px);
-  width: auto;
-}
-
 .title__description,
 .title__school,
 .pager {
@@ -138,10 +133,20 @@
 .schedule__download,
 .contact__map::before,
 .contact__review::before {
-  content: '\25bc';
   @include button_main();
   font-size: 8px;
   margin-left: 5px;
+}
+
+.next-page__title::after {
+  content: '\f0d7';
+  font-size: 15px;
+}
+
+.contacts-screen .next-page__title::after {
+  content: '\f0d8';
+  line-height: 20px;
+  font-size: 15px;
 }
 
 /*classes-screen*/
@@ -245,6 +250,11 @@
 }
 
 /*trial-screen*/
+.clients-screen .yogi-person,
+.trial-screen .yogi-person{
+  max-height: 480px;
+}
+
 .discount,
 .registry {
   font-family: Geometria-Light, Arial, sans-serif;
@@ -310,7 +320,8 @@ input[type="tel"] {
 
 /*trainers screen*/
 .trainers-screen .yogi-person {
-  right: 50px;
+  right: 55px;
+  position: relative;
 }
 
 .info__title {
@@ -427,8 +438,7 @@ input[type="tel"] {
 /*clients screen*/
 .clients-screen .yogi-person {
   position: absolute;
-  right: -5px;
-  max-height: 480px;
+  right: 10px;
   top: 40px;
 }
 
