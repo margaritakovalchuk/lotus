@@ -1,16 +1,14 @@
-console.log('Hello World');
-
 window.onload = new fullpage('#fullpage', {
     //Navigation
-    menu: '#menu',
+    // menu: '#menu',
     lockAnchors: false,
     anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage'],
-    navigation: false,
-    navigationPosition: 'right',
-    navigationTooltips: ['firstSlide', 'secondSlide'],
-    showActiveTooltip: false,
-    slidesNavigation: false,
-    slidesNavPosition: 'bottom',
+    // navigation: false,
+    // navigationPosition: 'right',
+    // navigationTooltips: ['firstSlide', 'secondSlide'],
+    // showActiveTooltip: false,
+    // slidesNavigation: false,
+    // slidesNavPosition: 'bottom',
 
     //Scrolling
     css3: true,
@@ -18,12 +16,12 @@ window.onload = new fullpage('#fullpage', {
     autoScrolling: true,
     fitToSection: true,
     fitToSectionDelay: 1000,
-    scrollBar: false,
+    // scrollBar: false,
     easing: 'easeInOutCubic',
     easingcss3: 'ease',
-    loopBottom: false,
-    loopTop: false,
-    loopHorizontal: true,
+    loopBottom: true,
+    // loopTop: false,
+    // loopHorizontal: true,
     continuousVertical: false,
     continuousHorizontal: false,
     scrollHorizontally: false,
@@ -33,7 +31,7 @@ window.onload = new fullpage('#fullpage', {
     resetSliders: false,
     fadingEffect: false,
     normalScrollElements: '#element1, .element2',
-    scrollOverflow: false,
+    // scrollOverflow: false,
     scrollOverflowReset: false,
     scrollOverflowOptions: null,
     touchSensitivity: 15,
@@ -47,10 +45,10 @@ window.onload = new fullpage('#fullpage', {
     //Design
     controlArrows: true,
     verticalCentered: true,
-    sectionsColor : ['#f9f5f4'],
-    // paddingTop: '3em',
-    // paddingBottom: '10px',
-    fixedElements: '#header',
+    sectionsColor : ['#f9f5f4', '#f9f5f4', '#f9f5f4', '#f9f5f4', '#f9f5f4', '#f9f5f4', '#f9f5f4', '#f9f5f4'],
+    paddingTop: '50px',
+    paddingBottom: '50px',
+    // fixedElements: '#header',
     responsiveWidth: 0,
     responsiveHeight: 0,
     responsiveSlides: false,
@@ -75,7 +73,3 @@ window.onload = new fullpage('#fullpage', {
     afterSlideLoad: function(section, origin, destination, direction){},
     onSlideLeave: function(section, origin, destination, direction){}
 });
-
-// window.onload = function () {
-//     new fullpage('#fullpage', {});
-// };

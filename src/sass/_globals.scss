@@ -57,28 +57,12 @@ i[class*="fa-"] {
   }
 }
 
-.main-content {
-  height: calc(100vh - 155px);
-}
-
-header {
-  position: absolute;
-}
-
-.header-wrapper {
-  display: flex;
-}
-
-.navbar_position-absolute,
+.navbar.position-absolute,
 .nav__burger {
   position: absolute;
-  left: 0;
+  left: 7px;
   top: 0;
-}
-
-.navbar_position-absolute {
   padding: 0;
-  z-index: 9999;
 }
 
 .nav__item {
@@ -100,10 +84,13 @@ header {
 }
 
 .wrapper__yogi-person {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   height: calc(100vh - 152px);
+
+  &.img-screen-1 {
+    background-image: url('../img/screen-01.png');
+  }
 }
 
-.yogi-person {
-  height: calc(100vh - 152px);
-  width: auto;
-}
