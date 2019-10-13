@@ -28,13 +28,13 @@ html(lang="ru")
                             .col-md-1.my-auto
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                             .col-md-5
-                                .wrapper__yogi-person.img-screen-1
+                                .wrapper__yogi-person(style=`background-image:url('../img/screen-01.png')`)
                             .col-md-4.title.pl-5
                                 .row.mb-3
                                     p.title__description Центр йоги
                                     p.title__school Lotos
                                 .row.invitation
-                                    a.col-md-7.offset-md-1.invitation__info.px-1(href="#")
+                                    a.col-md-9.offset-md-1.invitation__info(href="#")
                                         p.invitation__title Приглашаем вас и ваших друзей на бесплатное пробное занятие
                             .col-md-1.offset-md-1
                                 .row.pager.text-right
@@ -52,7 +52,7 @@ html(lang="ru")
                             .w-100
                             .col-md-1
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
-                            .col-md-2.align-self-start.switcher-wrapper
+                            .col-md-2.align-self-start.position-absolute
                                 ul.switcher
                                     li.switcher__item.switcher__item_active: a.switcher__link(href="#") Для начинающих
                                     li.switcher__item: a.switcher__link(href="#") Аштанга Виньяса
@@ -60,9 +60,8 @@ html(lang="ru")
                                     li.switcher__item: a.switcher__link(href="#") Кундалини
                                     li.switcher__item: a.switcher__link(href="#") Айенгара
                                     li.switcher__item: a.switcher__link(href="#") Терапия
-                            .col-md-3
-                                .wrapper.wrapper__yogi-person
-                                    img.yogi-person(src=path_img + "img/screen-02.png" alt="Yoga-person")
+                            .col-md-3.offset-2
+                                .wrapper__yogi-person(style=`background-image:url('../img/screen-02.png')`)
                             .col-md-5.info.align-self-start
                                 .info__title Yoga —
                                 .info__subtitle Для начинающих
@@ -95,8 +94,7 @@ html(lang="ru")
                             .col-md-1
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                             .col-md-5
-                                .wrapper.wrapper__yogi-person
-                                    img.yogi-person(src=path_img + "img/screen-03.png" alt="Yoga-person")
+                                .wrapper__yogi-person(style=`background-image:url('../img/screen-03.png')`)
                             .col-md-4.discount
                                 p.discount__details
                                     span.discount__amount 10%
@@ -132,7 +130,7 @@ html(lang="ru")
                             .w-100
                             .col-md-1
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
-                            .col-md-2.align-self-start.switcher-wrapper
+                            .col-md-2.align-self-start.position-absolute
                                 ul.switcher
                                     li.switcher__item.switcher__item_active.switcher__item_trainer: a.switcher__link(href="#") Максим Казаков
                                     li.switcher__item: a.switcher__link(href="#") Юлия Зырянова
@@ -140,9 +138,8 @@ html(lang="ru")
                                     li.switcher__item: a.switcher__link(href="#") Ольга Ветрова
                                     li.switcher__item: a.switcher__link(href="#") Катя Стреженова
                                     li.switcher__item: a.switcher__link(href="#") Мария Жукова
-                            .col-md-3.align-self-start
-                                .wrapper.wrapper__yogi-person.yogi-person_bgc
-                                    img.yogi-person(src=path_img + "img/screen-04.png" alt="Yoga-person")
+                            .col-md-3.align-self-start.offset-2
+                                .wrapper__yogi-person(style=`background-image:url('../img/screen-04.png')`)
                             .col-md-5.info.align-self-start
                                 .info__title.info__title_black Максим Казаков
                                 .info__subtitle Преподаватель йоги с 1997 года
@@ -177,8 +174,7 @@ html(lang="ru")
                             .col-md-1
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                             .col-md-5
-                                .wrapper.wrapper__yogi-person
-                                    img.yogi-person(src=path_img + "img/screen-05.png" alt="Yoga-person")
+                                .wrapper__yogi-person(style=`background-image:url('../img/screen-05.png')`)
                             .col-md-5.prices
                                 ul.prices__list.d-flex.flex-wrap
                                     li.price__card
@@ -319,14 +315,14 @@ html(lang="ru")
                             include _footer.pug
             .section
                 .container
-                    .main-content
+                    .main-content.clients-screen
                         .row
                             .col-md-3.offset-6
                                 block current-screen
                             .w-100
                             .col-md-1.my-auto
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
-                            .col-md-2.align-self-start.switcher-wrapper
+                            .col-md-2.align-self-start.position-absolute
                                 ul.switcher
                                     li.switcher__item: a.switcher__link(href="#") Жанна Блиц
                                     li.switcher__item.switcher__item_active.switcher__item_client: a.switcher__link(href="#") Арина Наумова
@@ -334,9 +330,8 @@ html(lang="ru")
                                     li.switcher__item: a.switcher__link(href="#") Ольга Ветрова
                                     li.switcher__item: a.switcher__link(href="#") Елена Снежная
                                     li.switcher__item: a.switcher__link(href="#") Юлиана Ветрова
-                            .col-md-3
-                                .wrapper.wrapper__yogi-person
-                                    img.yogi-person(src=path_img + "img/screen-07.png" alt="Yoga-person")
+                            .col-md-5
+                                .wrapper__yogi-person(style=`background-image:url('../img/screen-07.png')`)
                             .col-md-5.info.align-self-start
                                 .row.mb-4
                                     .col-md-4
@@ -374,7 +369,9 @@ html(lang="ru")
                             .w-100
                             .col-md-1
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
-                            .col-md-7.google-map#map
+                            .col-md-7
+                                .wrapper__yogi-person(style=`background-image:url('../img/map.png')`)
+                            //.col-md-7.google-map#map
                             .col-md-3.contact
                                 p.contact_small Адрес:
                                 p.contact__address СПб, Невский проспект 108
@@ -385,8 +382,8 @@ html(lang="ru")
                                 "A%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+%D0%A0%D0%BE%D1%81%D1%8" +
                                 "1%D0%B8%D1%8F,+191025/@59.9319657,30.3565843,17z/data=!4m5!3m4!1s0x469631a4ed2d7173:0x3" +
                                 "e6af3e9af92f6e5!8m2!3d59.931955!4d30.3575284?hl=ru") Смотреть на карте
-                                button.contact__review.position-relative.mb-3 Оставить отзыв
-                                small.contact__copyright.d-block.mb-5 &copy; 2018 — ООО “Центр йоги Лотос”
+                                button.contact__review.position-relative.mb-4 Оставить отзыв
+                                small.contact__copyright.d-block.mb-4 &copy; 2018 — ООО “Центр йоги Лотос”
                                 button.button__sign-in
                                     span.button__item +
                                     | Записаться онлайн

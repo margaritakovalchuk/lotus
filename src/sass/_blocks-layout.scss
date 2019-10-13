@@ -53,7 +53,7 @@
     line-height: 42px;
     background-image: $gradient-top;
     position: absolute;
-    left: -55px;
+    left: -45px;
     font-family: Geometria, Arial, sans-serif;
   }
 }
@@ -155,12 +155,10 @@
   top: 75px;
 }
 
-.switcher-wrapper {
-  top: 75px;
-}
-
 .switcher {
   position: relative;
+  top: 114px;
+  left: 100px;
 }
 
 .switcher__item {
@@ -289,18 +287,13 @@ input[type="tel"] {
   border: 0;
   border-bottom: 1px solid #c9c4c3;
   padding: 12px 0;
-  margin-bottom: 5px;
-
-  &[type="text"]:focus,
-  &[type="tel"] {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 
     &:focus {
       border-bottom: 1px solid #000000;
       color: $text-color;
     }
   }
-}
 
 .discount__agreement {
   font-size: 11px;
@@ -466,7 +459,7 @@ input[type="tel"] {
 
 .contact__address {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .contact__map::before,
