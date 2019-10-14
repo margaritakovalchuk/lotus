@@ -11,20 +11,17 @@ html(lang="ru")
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
         link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=cyrillic" rel="stylesheet")
         link(href="css/main.css" rel="stylesheet")
-        link(rel="stylesheet" type="text/css" href="fullpage.css")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css")
         link(rel="icon" type="image/png" href=path_img + "img/favicon-16x16.png" sizes="16x16")
         title Lotos
     body
         include _header.pug
+        include _footer.pug
         #fullpage
             .section
                 .container
                     .main-content
                         .row.align-items-center
-                            .col-md-3.offset-6
-                                    block current-screen
-                            .w-100
                             .col-md-1.my-auto
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                             .col-md-5
@@ -34,7 +31,7 @@ html(lang="ru")
                                     p.title__description Центр йоги
                                     p.title__school Lotos
                                 .row.invitation
-                                    a.col-md-9.offset-md-1.invitation__info(href="#")
+                                    a.col-md-9.offset-md-1.invitation__info(href="#thirdPage")
                                         p.invitation__title Приглашаем вас и ваших друзей на бесплатное пробное занятие
                             .col-md-1.offset-md-1
                                 .row.pager.text-right
@@ -42,14 +39,10 @@ html(lang="ru")
                                         p.pager-current 01
                                     .col-md-12
                                         p.pager-last - 08
-                            include _footer.pug
             .section
                 .container
                     .main-content
                         .row.align-items-center
-                            .col-md-3.offset-6
-                                block current-screen
-                            .w-100
                             .col-md-1
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                             .col-md-2.align-self-start.position-absolute
@@ -60,7 +53,7 @@ html(lang="ru")
                                     li.switcher__item: a.switcher__link(href="#") Кундалини
                                     li.switcher__item: a.switcher__link(href="#") Айенгара
                                     li.switcher__item: a.switcher__link(href="#") Терапия
-                            .col-md-3.offset-2
+                            .col-md-4.offset-1
                                 .wrapper__yogi-person(style=`background-image:url('../img/screen-02.png')`)
                             .col-md-5.info.align-self-start
                                 .info__title Yoga —
@@ -74,7 +67,7 @@ html(lang="ru")
                                         p.info__description
                                             | Мы предлагаем посетить бесплатное вводное занятие, чтобы узнать, почему так
                                             | много людей занимаются йогой и придерживаются здорового образа жизни.
-                                button.button__sign-in
+                                a.button__sign-in(href="#thirdPage")
                                     span.button__item +
                                     | Записаться онлайн
                             .col-md-1
@@ -83,14 +76,10 @@ html(lang="ru")
                                         p.pager-current 02
                                     .col-md-12
                                         p.pager-last - 08
-                            include _footer.pug
             .section
                 .container
                     .main-content
                         .row.align-items-center
-                            .col-md-3.offset-6
-                                block current-screen
-                            .w-100
                             .col-md-1
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                             .col-md-5
@@ -98,7 +87,9 @@ html(lang="ru")
                             .col-md-4.discount
                                 p.discount__details
                                     span.discount__amount 10%
-                                    |  скидка на абонемент
+                                    |  скидка
+                                    br
+                                    | на абонемент
                                 p.discount__intro Мы сделаем для ваc 10% скидку на абонемент,
                                     |  купленный в день посещения вводного занятия.
                                 form.registry
@@ -109,9 +100,10 @@ html(lang="ru")
                                     .registry-input-group
                                         input.button__sign-in(type="submit" value="Отправить заявку")
                                         i.button__item.fas.fa-envelope
-                                p.agreement.discount__agreement Нажимая «Отправить заявку»,
-                                    | вы даете согласие на обработку своих персональных данных
-                            .col-md-5.alert__notification.offset-md-6.d-none
+                                p.agreement Нажимая «Отправить заявку», вы даете согласие
+                                    br
+                                    | на обработку своих персональных данных
+                            .col-md-5.alert__notification.d-none
                                 p.alert__thanks Спасибо
                                 p.alert__details Мы свяжемся с вами в течение 15 минут...
                             .col-md-1.offset-md-1
@@ -120,14 +112,10 @@ html(lang="ru")
                                         p.pager-current 03
                                     .col-md-12
                                         p.pager-last - 08
-                            include _footer.pug
             .section
                 .container
                     .main-content
                         .row.align-items-center
-                            .col-md-3.offset-6
-                                block current-screen
-                            .w-100
                             .col-md-1
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                             .col-md-2.align-self-start.position-absolute
@@ -138,7 +126,7 @@ html(lang="ru")
                                     li.switcher__item: a.switcher__link(href="#") Ольга Ветрова
                                     li.switcher__item: a.switcher__link(href="#") Катя Стреженова
                                     li.switcher__item: a.switcher__link(href="#") Мария Жукова
-                            .col-md-3.align-self-start.offset-2
+                            .col-md-3.align-self-start.offset-2.pl-0
                                 .wrapper__yogi-person(style=`background-image:url('../img/screen-04.png')`)
                             .col-md-5.info.align-self-start
                                 .info__title.info__title_black Максим Казаков
@@ -154,7 +142,7 @@ html(lang="ru")
                                             | В йогу привел интерес. Является одним из самых опытных преподавателей и
                                             | опорой нашего центра. Все студенты любят Максима за отзывчивость
                                             | и индивидуальный подход к каждому.
-                                button.button__sign-in
+                                a.button__sign-in(href="#thirdPage")
                                     span.button__item +
                                     | Записаться к тренеру
                             .col-md-1
@@ -163,163 +151,159 @@ html(lang="ru")
                                         p.pager-current 04
                                     .col-md-12
                                         p.pager-last - 08
-                            include _footer.pug
             .section
                 .container
                     .main-content
                         .row.align-items-center.position-relative
-                            .col-md-3.offset-6
-                                block current-screen
-                            .w-100
                             .col-md-1
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                             .col-md-5
                                 .wrapper__yogi-person(style=`background-image:url('../img/screen-05.png')`)
                             .col-md-5.prices
-                                ul.prices__list.d-flex.flex-wrap
-                                    li.price__card
+                                form.prices__list.d-flex.flex-wrap
+                                    label.price__card
+                                        input(type="radio" name="subscription" value="one-time" checked)
                                         .price__wrapper
                                             p.price__title Разовое занятие
                                             p.price__item
                                                 span.price 300
                                                 |  руб.
-                                        button.price__button.price__button_active.button__item +
-                                    li.price__card
+                                        span.price__button +
+                                    label.price__card
+                                        input(type="radio" name="subscription" value="month-time")
                                         .price__wrapper
                                             p.price__title Месяц занятий
                                             p.price__item
                                                 span.price 2 000
                                                 |  руб.
-                                        button.price__button.button__item +
-                                    li.price__card
+                                        span.price__button +
+                                    label.price__card
+                                        input(type="radio" name="subscription" value="two-month-time")
                                         .price__wrapper
                                             p.price__title 2 месяца занятий
                                             p.price__item
                                                 span.price 3 500
                                                 |  руб.
-                                        button.price__button.button__item +
-                                    li.price__card
+                                        span.price__button +
+                                    label.price__card
+                                        input(type="radio" name="subscription" value="three-month-time")
                                         .price__wrapper
                                             p.price__title 3 месяца занятий
                                             p.price__item
                                                 span.price 4 500
                                                 |  руб.
-                                        button.price__button.button__item +
-                                    li.price__card
+                                        span.price__button +
+                                    label.price__card
+                                        input(type="radio" name="subscription" value="half-a-year-time")
                                         .price__wrapper
                                             p.price__title Пол года занятий
                                             p.price__item
                                                 span.price 8 000
                                                 |  руб.
-                                        button.price__button.button__item +
-                                    .li.price__card
+                                        span.price__button +
+                                    label.price__card
+                                        input(type="radio" name="subscription" value="year-time")
                                         .price__wrapper
                                             p.price__title Год занятий
                                             p.price__item
                                                 span.price 14 000
                                                 |  руб.
-                                        button.price__button.button__item +
-                                button.button__sign-in
-                                    span.button__item  &#128504;
-                                    | Заказать абонемент
+                                        span.price__button +
+                                    button(type="submit").button__sign-in.mt-4
+                                        span.button__item  &#128504;
+                                        | Заказать абонемент
                             .col-md-1
                                 .row.pager.text-right
                                     .col-md-12
                                         p.pager-current 05
                                     .col-md-12
                                         p.pager-last - 08
-                            include _footer.pug
             .section
                 .container
                     .main-content
                         .row.align-items-center
-                            .col-md-3.offset-6
-                                block current-screen
-                            .w-100
                             .col-md-1
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                             .col-md-10.schedule
                                 table.schedule__table
-                                    tr
-                                        th.schedule__title.schedule__title_download
-                                            button.schedule__download
-                                            p.schedule__text Скачать расписание
-                                        th.schedule__title_bold 08:00 − 09:25
-                                        th.schedule__title_bold 09:30 − 10:55
-                                        th.schedule__title_bold 11:00 − 12:25
-                                        th.schedule__title_bold 13:30 − 14:55
-                                        th.schedule__title_bold 15:00 − 16:25
-                                        th.schedule__title_bold 17:00 − 18:25
-                                    tr
-                                        td.schedule__title_bold Понедельник
-                                        td.schedule__title Йога для начинающих
-                                        td.schedule__title Универсальная йога
-                                        td.schedule__title Йога Айенгара
-                                        td.schedule__title Аштанга Виньяса йога
-                                        td.schedule__title Йогатерапия
-                                        td.schedule__title Кундалини йога
-                                    tr
-                                        td.schedule__title_bold Вторник
-                                        td.schedule__title Кундалини йога
-                                        td.schedule__title Йогатерапия
-                                        td.schedule__title Аштанга Виньяса йога
-                                        td.schedule__title Йога Айенгара
-                                        td.schedule__title Универсальная йога
-                                        td.schedule__title Йога для начинающих
-                                    tr
-                                        td.schedule__title_bold Среда
-                                        td.schedule__title Универсальная йога
-                                        td.schedule__title Йога для начинающих
-                                        td.schedule__title Аштанга Виньяса йога
-                                        td.schedule__title Йога Айенгара
-                                        td.schedule__title Кундалини йога
-                                        td.schedule__title Йогатерапия
-                                    tr
-                                        td.schedule__title_bold Четверг
-                                        td.schedule__title Йога для начинающих
-                                        td.schedule__title Универсальная йога
-                                        td.schedule__title Йога Айенгара
-                                        td.schedule__title Аштанга Виньяса йога
-                                        td.schedule__title Йогатерапия
-                                        td.schedule__title Кундалини йога
-                                    tr
-                                        td.schedule__title_bold Пятница
-                                        td.schedule__title Кундалини йога
-                                        td.schedule__title Йогатерапия
-                                        td.schedule__title Аштанга Виньяса йога
-                                        td.schedule__title Йога Айенгара
-                                        td.schedule__title Универсальная йога
-                                        td.schedule__title Йога для начинающих
-                                    tr
-                                        td.schedule__title_bold Суббота
-                                        td.schedule__title Универсальная йога
-                                        td.schedule__title Йога для начинающих
-                                        td.schedule__title Аштанга Виньяса йога
-                                        td.schedule__title Йога Айенгара
-                                        td.schedule__title Кундалини йога
-                                        td.schedule__title Йогатерапия
-                                    tr
-                                        td.schedule__title_bold Воскресенье
-                                        td.schedule__title Йога для начинающих
-                                        td.schedule__title Универсальная йога
-                                        td.schedule__title Йога Айенгара
-                                        td.schedule__title Аштанга Виньяса йога
-                                        td.schedule__title Йогатерапия
-                                        td.schedule__title Кундалини йога
+                                    thead
+                                        tr.schedule__title_bold
+                                            th.schedule__title_download
+                                                form(method="get" action="#")
+                                                button.schedule__download(type="submit") Скачать расписание
+                                            th.schedule__title_bold 08:00 − 09:25
+                                            th.schedule__title_bold 09:30 − 10:55
+                                            th.schedule__title_bold 11:00 − 12:25
+                                            th.schedule__title_bold 13:30 − 14:55
+                                            th.schedule__title_bold 15:00 − 16:25
+                                            th.schedule__title_bold 17:00 − 18:25
+                                    tbody
+                                        tr
+                                            td.schedule__title_bold Понедельник
+                                            td Йога для начинающих
+                                            td Универсальная йога
+                                            td Йога Айенгара
+                                            td Аштанга Виньяса йога
+                                            td Йогатерапия
+                                            td Кундалини йога
+                                        tr
+                                            td.schedule__title_bold Вторник
+                                            td Кундалини йога
+                                            td Йогатерапия
+                                            td Аштанга Виньяса йога
+                                            td Йога Айенгара
+                                            td Универсальная йога
+                                            td Йога для начинающих
+                                        tr
+                                            td.schedule__title_bold Среда
+                                            td Универсальная йога
+                                            td Йога для начинающих
+                                            td Аштанга Виньяса йога
+                                            td Йога Айенгара
+                                            td Кундалини йога
+                                            td Йогатерапия
+                                        tr
+                                            td.schedule__title_bold Четверг
+                                            td Йога для начинающих
+                                            td Универсальная йога
+                                            td Йога Айенгара
+                                            td Аштанга Виньяса йога
+                                            td Йогатерапия
+                                            td Кундалини йога
+                                        tr
+                                            td.schedule__title_bold Пятница
+                                            td Кундалини йога
+                                            td Йогатерапия
+                                            td Аштанга Виньяса йога
+                                            td Йога Айенгара
+                                            td Универсальная йога
+                                            td Йога для начинающих
+                                        tr
+                                            td.schedule__title_bold Суббота
+                                            td Универсальная йога
+                                            td Йога для начинающих
+                                            td Аштанга Виньяса йога
+                                            td Йога Айенгара
+                                            td Кундалини йога
+                                            td Йогатерапия
+                                        tr
+                                            td.schedule__title_bold Воскресенье
+                                            td Йога для начинающих
+                                            td Универсальная йога
+                                            td Йога Айенгара
+                                            td Аштанга Виньяса йога
+                                            td Йогатерапия
+                                            td Кундалини йога
                             .col-md-1
                                 .row.pager.text-right
                                     .col-md-12
                                         p.pager-current 06
                                     .col-md-12
                                         p.pager-last - 08
-                            include _footer.pug
             .section
                 .container
                     .main-content.clients-screen
                         .row
-                            .col-md-3.offset-6
-                                block current-screen
-                            .w-100
                             .col-md-1.my-auto
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
                             .col-md-2.align-self-start.position-absolute
@@ -330,7 +314,7 @@ html(lang="ru")
                                     li.switcher__item: a.switcher__link(href="#") Ольга Ветрова
                                     li.switcher__item: a.switcher__link(href="#") Елена Снежная
                                     li.switcher__item: a.switcher__link(href="#") Юлиана Ветрова
-                            .col-md-5
+                            .col-md-5.p-0
                                 .wrapper__yogi-person(style=`background-image:url('../img/screen-07.png')`)
                             .col-md-5.info.align-self-start
                                 .row.mb-4
@@ -350,7 +334,7 @@ html(lang="ru")
                                             | После упорных занятий я стала меньше болеть, и поняла,
                                             | в чем смысл всех упражнений. Позы получаются элегантно, и не больно только
                                             | тогда, когда не прилагаешь усилия, а остаёшься расслабленным на протяжении всего урока.
-                                button.button__sign-in
+                                a.button__sign-in(href="#thirdPage")
                                     span.button__item +
                                     | Попробовать тоже
                             .col-md-1.my-auto
@@ -359,17 +343,13 @@ html(lang="ru")
                                         p.pager-current 07
                                     .col-md-12
                                         p.pager-last - 08
-                            include _footer.pug
             .section
                 .container
                     .main-content
                         .row.align-items-center
-                            .col-md-3.offset-6
-                                block current-screen
-                            .w-100
                             .col-md-1
                                 img.lotos(src=path_img + "img/lotos.png" alt="lotos")
-                            .col-md-7
+                            .col-md-6
                                 .wrapper__yogi-person(style=`background-image:url('../img/map.png')`)
                             //.col-md-7.google-map#map
                             .col-md-3.contact
@@ -387,30 +367,32 @@ html(lang="ru")
                                 button.button__sign-in
                                     span.button__item +
                                     | Записаться онлайн
-                            .col-md-3.d-none
-                                form.registry
+                            .col-md-3.d-none.response-block
+                                form.response-form
+                                    button.close-form +
+                                    p.response Для нас очень важно ваше  мнение
                                     label.sr-only Ваше имя
                                     input(type="text" placeholder="Ваше имя")
-                                    label.sr-only Ваш телефон
-                                    input(type="tel" placeholder="Ваш телефон")
+                                    label.sr-only Ваш отзыв
+                                    textarea(type="textarea" placeholder="Ваш отзыв" rows="5")
                                     .registry-input-group
-                                        input.button__sign-in(type="submit" value="Отправить заявку")
+                                        input.button__sign-in(type="submit" value="Отправить отзыв")
                                         i.button__item.fas.fa-envelope
-                                p.agreement.discount__agreement Нажимая «Отправить заявку»,
-                                    | вы даете согласие на обработку своих персональных данных
-                            .col-md-1
+                                p.agreement Нажимая «Отправить отзыв», вы даете
+                                    br
+                                    | согласие на обработку своих персональных данных
+                            .col-md-1.offset-md-1
                                 .row.pager.text-right
                                     .col-md-12
                                         p.pager-current 08
                                     .col-md-12
                                         p.pager-last - 08
-                            include _footer.pug
 
             <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
-            script(src=path_js +"js/easings.js")
+            script(src=path_js + "js/easings.js")
 
             <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
-            script(type="text/javascript" src=path_js +"js/scrolloverflow.js")
+            script(type="text/javascript" src=path_js + "js/scrolloverflow.js")
 
             script(src=path_js + "js/fullpage.js")
 

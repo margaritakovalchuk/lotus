@@ -11,17 +11,17 @@
 }
 
 @mixin text-gradient_top {
-  background: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+  background-image: linear-gradient(to top, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @mixin text-gradient_right {
-  background: linear-gradient(to right, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
+  background-image: linear-gradient(to right, rgba(247, 141, 106, 1) 0%, rgba(252, 102, 162, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @mixin button_main {
-  background: $gradient-top;
+  background-image: $gradient-top;
   color: $white-color;
   border-radius: 100%;
   text-align: center;
@@ -40,13 +40,3 @@
   display: inline-block;
   font-family: FontAwesome, Arial, sans-serif;
 }
-
-@mixin button_small_hover {
-  @include button_main_hover();
-}
-
-//@mixin button_big_hover {
-//  background: $white-color;
-//  color: $main-color;
-//  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
-//}

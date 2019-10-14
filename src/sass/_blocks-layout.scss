@@ -48,10 +48,8 @@
     content: "+";
     width: 43px;
     height: 43px;
-    color: $white-color;
     font-size: 32px;
     line-height: 42px;
-    background-image: $gradient-top;
     position: absolute;
     left: -45px;
     font-family: Geometria, Arial, sans-serif;
@@ -63,12 +61,6 @@
   @include button_main_hover;
 }
 
-.screen__title li {
-  position: relative;
-  left: 10px;
-  margin-bottom: 30px;
-}
-
 .screen__title {
   &::before {
     content: "";
@@ -78,7 +70,7 @@
     background-color: $main-color;
     position: absolute;
     top: 4px;
-    left: 13px;
+    left: 4px;
   }
 }
 
@@ -130,7 +122,7 @@
 }
 
 .next-page__title::after,
-.schedule__download,
+  //.schedule__download,
 .contact__map::before,
 .contact__review::before {
   @include button_main();
@@ -157,7 +149,7 @@
 
 .switcher {
   position: relative;
-  top: 114px;
+  top: 75px;
   left: 100px;
 }
 
@@ -223,6 +215,12 @@
   line-height: 11px;
 }
 
+a.button__sign-in {
+  padding-top: 13px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
 .button__sign-in {
   font-size: 11px;
   padding: 15px 35px 15px 55px;
@@ -230,6 +228,7 @@
   background-color: $main-color;
   position: relative;
   border: none;
+  margin-top: 15px;
 }
 
 .button__item {
@@ -238,7 +237,7 @@
   left: 0;
   bottom: 0;
   border-radius: 100%;
-  padding: 15px;
+  padding: 14px;
   background-image: $gradient-right;
 }
 
@@ -249,23 +248,24 @@
 
 /*trial-screen*/
 .clients-screen .yogi-person,
-.trial-screen .yogi-person{
+.trial-screen .yogi-person {
   max-height: 480px;
 }
 
 .discount,
-.registry {
+.registry,
+.response-form {
   font-family: Geometria-Light, Arial, sans-serif;
 }
 
 .registry-input-group {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .discount__details {
   font-size: 33px;
-  line-height: 38px;
+  line-height: 35px;
   margin-bottom: 27px;
 }
 
@@ -280,31 +280,29 @@
 }
 
 input[type="text"],
-input[type="tel"] {
+input[type="tel"],
+textarea {
   font-size: 11px;
   width: 300px;
   background-color: transparent;
   border: 0;
   border-bottom: 1px solid #c9c4c3;
   padding: 12px 0;
-  margin-bottom: 30px;
+  margin-bottom: 13px;
 
-    &:focus {
-      border-bottom: 1px solid #000000;
-      color: $text-color;
-    }
+  &:focus {
+    border-bottom: 1px solid #000000;
+    color: $text-color;
   }
-
-.discount__agreement {
-  font-size: 11px;
 }
 
-.alert__notification {
-  position: absolute;
+.agreement {
+  font-size: 11px;
 }
 
 .alert__thanks {
   font-size: 52px;
+  @include text-gradient_right;
 }
 
 .alert__details {
@@ -326,6 +324,15 @@ input[type="tel"] {
 /*subscription-screen*/
 .prices__list {
   margin-bottom: 30px;
+}
+
+.prices__list input[type="radio"] {
+  display: none;
+
+  &:checked ~ .price__button {
+    background-image: $gradient-right;
+    color: $white-color
+  }
 }
 
 .price__wrapper {
@@ -355,15 +362,14 @@ input[type="tel"] {
 
 .price__button {
   border-radius: 100%;
-  position: static;
   padding: 9px;
   align-self: center;
-  background: #f9f5f4;
-
-  &:hover,
-  &_active {
-    background-image: $gradient-right;
-  }
+  background-color: #f9f5f4;
+  font-size: 16px;
+  left: 0;
+  bottom: 0;
+  line-height: 11px;
+  color: #c9c4c3;
 }
 
 /*schedule screen*/
@@ -372,8 +378,8 @@ input[type="tel"] {
   border-spacing: 1px;
 }
 
-.schedule__title,
-.schedule__title_bold {
+th,
+td {
   font-size: 10px;
   font-family: Geometria-Light, Arial, sans-serif;
   background-color: $white-color;
@@ -391,40 +397,29 @@ input[type="tel"] {
     color: $main-color;
   }
 
-  &_download {
-    display: flex;
-    align-items: center;
-    text-align: left;
+  &_download:hover {
+    background-image: $gradient-top;
+  }
 
-    &:hover {
-      background: $gradient-top;
-    }
-
-    &:hover .schedule__text {
-      color: $white-color;
-    }
-
-    &:hover .schedule__download::before {
-      background: $white-color;
-      color: $main-color;
-    }
-
-    &:hover .fa-arrow-down {
-      color: $main-color;
-    }
+  &_download:hover .schedule__download::before {
+    background: $white-color;
+    color: $main-color;
+  }
+  &_download:hover .schedule__download {
+    color: $white-color;
   }
 }
 
 .schedule__download {
-  margin-left: 0;
-  margin-right: 15px;
-}
+  color: $text-color;
+  display: flex;
+  text-align: left;
 
-.schedule__download {
   &::before {
     content: '\f063';
     @include button_small();
-    padding: 6px;
+    padding: 5px;
+    margin-right: 15px;
   }
 }
 
@@ -485,7 +480,20 @@ input[type="tel"] {
 .contact__review:hover {
   color: $main-color;
 }
-
+.response {
+  font-size: 30px;
+  line-height: 1.1;
+}
+.close-form {
+  @include button_main_hover;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  font-size: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -28px;
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .pager-current {
     font-size: 40px;

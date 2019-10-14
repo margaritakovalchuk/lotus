@@ -42,17 +42,43 @@ input {
   border: 0 none;
 }
 
+label {
+  cursor: pointer;
+}
+
 i[class*="fa-"] {
   font-family: FontAwesome;
   font-style: normal;
 }
 
 .navbar.position-absolute,
-.nav__burger {
+.nav__burger,
+.nav__cross {
   position: absolute;
   left: 7px;
   top: 0;
   padding: 0;
+}
+//.nav__burger {
+//  transition: all 0.5s ease-in-out;
+//  line:nth-child() {
+//
+//  }
+
+.nav__cross {
+  animation: menu 1s infinite ease-in-out;
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0
+  }
+  50% {
+    opacity: 50%
+  }
+  100% {
+    opacity: 100%
+  }
 }
 
 .nav__item {

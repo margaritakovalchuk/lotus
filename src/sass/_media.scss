@@ -4,12 +4,18 @@
   }
 }
 
-@media (min-width: 992px)and (max-width: 1199px) {
-.pager-current {
-  font-size: 38px;
-}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pager-current {
+    font-size: 38px;
+  }
   .pager-last {
     font-size: 18px;
     line-height: 33px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .title__school {
+    font-size: 100px;
   }
 }

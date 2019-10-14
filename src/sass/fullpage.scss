@@ -3,5 +3,14 @@
   position: fixed;
   left: 0;
   right: 0;
-  top: 50px;
+  top: 41px;
 }
+
+#footer {
+  z-index: 999999 !important;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 21px;
+}
+
