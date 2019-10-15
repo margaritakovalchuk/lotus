@@ -14,21 +14,63 @@
   }
 }
 
-@media (min-width: 769px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav__menu,
   .nav__item,
   .screen__phone {
     font-size: 16px;
   }
+
   .lotos {
-    width: 100%;
-    position: absolute;
+    max-width: 50%;
   }
 
   .title__school {
-    font-size: 100px;
+    letter-spacing: -6px;
   }
 
   .wrapper__yogi-person {
     transform: scaleX(-1);
+  }
+
+  .invitation__title {
+    font-size: 18px;
+
+    &::before {
+      width: 45px;
+      height: 45px;
+      font-size: 35px;
+      line-height: 44px;
+      top: 4px;
+    }
+  }
+
+  .next-page__title,
+  .socials {
+    line-height: 1;
+  }
+
+  .social__link {
+    font-size: 11px;
+  }
+
+  .nav__menu {
+    font-size: 0;
+  }
+
+  .next-page__title {
+    font-size: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .next-page__title {
+    font-size: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .next-page__title {
+    font-size: 0;
   }
 }
