@@ -43,7 +43,7 @@ html(lang="ru")
                 .container
                     .main-content.classes-screen
                         .row.align-items-center
-                            .col-md-1
+                            .col-lg-1.d-lg-block.order-lg-1.d-none
                                 img.lotos(src=path_img + "/img/lotos.png" alt="lotos")
                             .col-md-2.align-self-start.position-absolute
                                 ul.switcher
@@ -53,25 +53,25 @@ html(lang="ru")
                                     li.switcher__item: a.switcher__link(href="#") Кундалини
                                     li.switcher__item: a.switcher__link(href="#") Айенгара
                                     li.switcher__item: a.switcher__link(href="#") Терапия
-                            .col-md-4.offset-1
+                            .col-lg-4.offset-lg-1.col-md-6.order-md-2
                                 .wrapper__yogi-person(style=`background-image:url('../img/screen-02.png')`)
-                            .col-md-5.info.align-self-start
+                            .col-lg-5.info.align-self-start.col-md-6.order-md-1
                                 .info
                                     .info__title Yoga —
                                     .info__subtitle Для начинающих
                                     .row
-                                        .col-md-9
+                                        .col-lg-9
                                             p.info__description
                                                 | Йога для начинающих рассчитана на тех, кто до этого никогда ей не занимался
                                                 | и требует обучения. Такой программный комплекс существует и в нашем центре.
-                                        .col-md-9
+                                        .col-lg-9
                                             p.info__description
                                                 | Мы предлагаем посетить бесплатное вводное занятие, чтобы узнать, почему так
                                                 | много людей занимаются йогой и придерживаются здорового образа жизни.
                                     a.button__sign-in(href="#thirdPage")
                                         span.button__item +
                                         | Записаться онлайн
-                            .col-md-1
+                            .col-lg-1.d-lg-block.order-lg-4.offset-lg-1.d-md-none
                                 .pager.text-right
                                     p.pager-current 02
                                     p.pager-last - 08
