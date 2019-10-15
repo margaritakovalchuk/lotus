@@ -143,8 +143,12 @@
 
 /*classes-screen*/
 .info {
-  position: relative;
   top: 75px;
+  position: relative;
+}
+
+.classes-screen .info {
+  top: 40px;
 }
 
 .switcher {
@@ -335,10 +339,6 @@ textarea {
   }
 }
 
-.price__wrapper {
-  margin-right: 3px;
-}
-
 .price__card {
   width: 43%;
   padding: 26px 10px 26px 25px;
@@ -405,6 +405,7 @@ td {
     background: $white-color;
     color: $main-color;
   }
+
   &_download:hover .schedule__download {
     color: $white-color;
   }
@@ -480,10 +481,12 @@ td {
 .contact__review:hover {
   color: $main-color;
 }
+
 .response {
   font-size: 30px;
   line-height: 1.1;
 }
+
 .close-form {
   @include button_main_hover;
   width: 30px;
@@ -494,6 +497,7 @@ td {
   position: absolute;
   right: -28px;
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .pager-current {
     font-size: 40px;

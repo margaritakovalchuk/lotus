@@ -1,9 +1,9 @@
 header#header
     .container
         .row
-            .col-md-6
+            .col-lg-6.col-md-6
                 nav.navbar.navbar-toggler.position-absolute(data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="true")
-                    button.nav__item Меню
+                    button(type="button").nav__item Меню
                         svg(class="nav__burger" width="16px" height="13px")
                             line.short-line(x1="0" y1="1" x2="2" y2="1" stroke="#000000" fill="transparent" stroke-width="1")
                             line(x1="4" y1="1" x2="16" y2="1" stroke="#f78e6a" fill="transparent" stroke-width="1")
@@ -15,6 +15,8 @@ header#header
                         //    line(x1="0" y1="0" x2="16" y2="13" stroke="#000000" fill="transparent" stroke-width="1")
                         //    line(x1="16" y1="0" x2="0" y2="13" stroke="#000000" fill="transparent" stroke-width="1")
                     .collapse.navbar-collapse#navbarCollapse
+                        // TODO ul.navbar-nav.main-nav
+                        // .main-nav li a.active {}
                         ul.navbar-nav
                             li.nav__item: a.nav__link.nav__link_active(href="#firstPage") Главная
                             li.nav__item: a.nav__link(href="#secondPage") Направления
@@ -24,8 +26,8 @@ header#header
                             li.nav__item: a.nav__link(href="#sixthPage") Расписание
                             li.nav__item: a.nav__link(href="#seventhPage") Отзывы
                             li.nav__item: a.nav__link(href="#eighthPage") Контакты
-            .col-md-3
-                block current-screen
-            .col-md-3
+            .col-lg-3.d-lg-block.d-none
+                p.screen__title Добро пожаловать
+            .col-lg-3.col-md-6
                 .header__phone
                     a.screen__phone.text-right.d-block(href="tel:+78123455697") +7 (812) 345-56-97

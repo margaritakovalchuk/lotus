@@ -47,7 +47,7 @@ label {
 }
 
 i[class*="fa-"] {
-  font-family: FontAwesome;
+  font-family: "FontAwesome";
   font-style: normal;
 }
 
@@ -59,11 +59,6 @@ i[class*="fa-"] {
   top: 0;
   padding: 0;
 }
-//.nav__burger {
-//  transition: all 0.5s ease-in-out;
-//  line:nth-child() {
-//
-//  }
 
 .nav__cross {
   animation: menu 1s infinite ease-in-out;
