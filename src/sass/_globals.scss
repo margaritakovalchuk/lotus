@@ -27,11 +27,11 @@ p {
   margin-bottom: 0;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+//ul {
+//  list-style-type: none;
+//  padding: 0;
+//  margin: 0;
+//}
 
 img {
   width: 100%;
@@ -51,7 +51,7 @@ i[class*="fa-"] {
   font-style: normal;
 }
 
-.navbar.position-absolute,
+.navbar,
 .nav__burger,
 .nav__cross {
   position: absolute;
@@ -76,23 +76,23 @@ i[class*="fa-"] {
   }
 }
 
-.nav__menu,
-.nav__item {
+.navbar__menu,
+.navbar-nav li {
   margin-bottom: 16px;
   margin-left: 36px;
   padding: 0;
 
-  &hover .nav__link[href] {
+  &hover .navbar-nav a[href] {
     color: $main-color;
   }
 }
 
-.nav__link_active {
+.navbar-nav a.active {
   color: $main-color;
 }
 
 .lotos {
-  //max-width: 50%;
+  width: 50%;
 }
 
 .wrapper__yogi-person {

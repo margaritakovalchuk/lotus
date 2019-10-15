@@ -35,7 +35,7 @@ html(lang="ru")
                                         .col-lg-9.col-md-12.offset-md-1
                                             a.invitation__info(href="#thirdPage")
                                                 p.invitation__title Приглашаем вас и ваших друзей на бесплатное пробное занятие
-                            .col-lg-1.d-lg-block.order-lg-4.offset-lg-1.d-md-none
+                            .col-lg-1.d-lg-block.order-lg-4.offset-lg-1.d-md-none.d-sm-none
                                 .pager.text-right
                                     p.pager-current 01
                                     p.pager-last - 08
@@ -46,13 +46,13 @@ html(lang="ru")
                             .col-lg-1.d-lg-block.order-lg-1.d-none
                                 img.lotos(src=path_img + "/img/lotos.png" alt="lotos")
                             .col-md-2.align-self-start.position-absolute
-                                ul.switcher
-                                    li.switcher__item.switcher__item_active: a.switcher__link(href="#") Для начинающих
-                                    li.switcher__item: a.switcher__link(href="#") Аштанга Виньяса
-                                    li.switcher__item: a.switcher__link(href="#") Универсальная
-                                    li.switcher__item: a.switcher__link(href="#") Кундалини
-                                    li.switcher__item: a.switcher__link(href="#") Айенгара
-                                    li.switcher__item: a.switcher__link(href="#") Терапия
+                                ul.switcher.list-unstyled
+                                    li.active: a(href="#") Для начинающих
+                                    li: a(href="#") Аштанга Виньяса
+                                    li: a(href="#") Универсальная
+                                    li: a(href="#") Кундалини
+                                    li: a(href="#") Айенгара
+                                    li: a(href="#") Терапия
                             .col-lg-4.offset-lg-1.col-md-6.order-md-2
                                 .wrapper__yogi-person(style=`background-image:url('../img/screen-02.png')`)
                             .col-lg-5.info.align-self-start.col-md-6.order-md-1
@@ -120,13 +120,13 @@ html(lang="ru")
                             .col-md-1
                                 img.lotos(src=path_img + "/img/lotos.png" alt="lotos")
                             .col-md-2.align-self-start.position-absolute
-                                ul.switcher
-                                    li.switcher__item.switcher__item_active.switcher__item_trainer: a.switcher__link(href="#") Максим Казаков
-                                    li.switcher__item: a.switcher__link(href="#") Юлия Зырянова
-                                    li.switcher__item: a.switcher__link(href="#") Настя Антипова
-                                    li.switcher__item: a.switcher__link(href="#") Ольга Ветрова
-                                    li.switcher__item: a.switcher__link(href="#") Катя Стреженова
-                                    li.switcher__item: a.switcher__link(href="#") Мария Жукова
+                                ul.switcher.switcher_trainer.list-unstyled
+                                    li.active: a(href="#") Максим Казаков
+                                    li: a(href="#") Юлия Зырянова
+                                    li: a(href="#") Настя Антипова
+                                    li: a(href="#") Ольга Ветрова
+                                    li: a(href="#") Катя Стреженова
+                                    li: a(href="#") Мария Жукова
                             .col-md-3.align-self-start.offset-2.pl-0
                                 .wrapper__yogi-person(style=`background-image:url('../img/screen-04.png')`)
                             .col-md-5.align-self-start
@@ -305,13 +305,13 @@ html(lang="ru")
                             .col-md-1
                                 img.lotos(src=path_img + "/img/lotos.png" alt="lotos")
                             .col-md-2.align-self-start.position-absolute
-                                ul.switcher
-                                    li.switcher__item: a.switcher__link(href="#") Жанна Блиц
-                                    li.switcher__item.switcher__item_active.switcher__item_client: a.switcher__link(href="#") Арина Наумова
-                                    li.switcher__item: a.switcher__link(href="#") Виталий Коробко
-                                    li.switcher__item: a.switcher__link(href="#") Ольга Ветрова
-                                    li.switcher__item: a.switcher__link(href="#") Елена Снежная
-                                    li.switcher__item: a.switcher__link(href="#") Юлиана Ветрова
+                                ul.switcher.switcher_client.list-unstyled
+                                    li: a(href="#") Жанна Блиц
+                                    li.active: a(href="#") Арина Наумова
+                                    li: a(href="#") Виталий Коробко
+                                    li: a(href="#") Ольга Ветрова
+                                    li: a(href="#") Елена Снежная
+                                    li: a(href="#") Юлиана Ветрова
                             .col-md-5.p-0
                                 .wrapper__yogi-person(style=`background-image:url('../img/screen-07.png')`)
                             .col-md-5.align-self-start
@@ -352,7 +352,7 @@ html(lang="ru")
                             .col-md-3
                                 .contact
                                     p.contact_small Адрес:
-                                    p.contact__address СПб, Невский проспект 108
+                                    address.contact__address СПб, Невский проспект 108
                                     p.contact_small Email:
                                     a.contact__address.d-block.mb-3(href="mailto:lotos-yoga@gmail.com") Lotos-yoga@gmail.com
                                     a.contact__map.d-block.position-relative.mb-2(href="https://www.google.com.ua/maps/place" +

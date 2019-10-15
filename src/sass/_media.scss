@@ -15,15 +15,24 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .nav__menu,
-  .nav__item,
+  .navbar__menu,
+  .navbar-nav li,
   .screen__phone {
     font-size: 16px;
   }
 
+  .navbar-nav__wrapper {
+    position: relative;
+    top: -16px;
+  }
 
   .title__school {
     letter-spacing: -6px;
+  }
+
+  .lotos {
+    //position: relative;
+    //top: -12px;
   }
 
   .wrapper__yogi-person {
@@ -51,7 +60,7 @@
     font-size: 11px;
   }
 
-  .nav__menu {
+  .navbar__menu {
     font-size: 0;
   }
 
@@ -64,10 +73,22 @@
   .next-page__title {
     font-size: 0;
   }
+  .wrapper__yogi-person {
+    //background-position: top;
+    height: calc(100vh - 252px);
+  }
 }
 
-@media (max-width: 575px) {
+@media  (max-width: 575px) {
   .next-page__title {
     font-size: 0;
   }
+.lotos {
+  min-width: 33px;
+}
+
+}
+
+@media (max-width: 319px) {
+
 }

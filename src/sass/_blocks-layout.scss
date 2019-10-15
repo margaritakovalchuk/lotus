@@ -1,6 +1,6 @@
 /*welcome-screen*/
-.nav__menu,
-.nav__item,
+.navbar__menu,
+.navbar-nav li,
 .screen__title,
 .screen__phone {
   font-size: 12px;
@@ -159,35 +159,35 @@
   left: 100px;
 }
 
-.switcher__item {
+.switcher li {
   font-size: 12px;
   line-height: 28px;
   color: #666666;
 
-  &_active {
+  &.active {
     color: $text-color;
     font-weight: 700;
   }
 }
 
-.switcher__item_active::before,
-.switcher__link:hover,
+.switcher li.active::before,
+.switcher a:hover,
 .info__title {
   color: $main-color;
 }
 
-.switcher__item_active::before {
+.switcher li.active::before {
   content: 'Yoga —';
   position: absolute;
   left: -51px;
 }
 
-.switcher__item_trainer.switcher__item_active::before {
+.switcher_trainer li.active::before {
   content: 'Trainer —';
   left: -61px;
 }
 
-.switcher__item_client.switcher__item_active::before {
+.switcher_client li.active::before {
   content: 'Clients —';
   left: -61px;
 }

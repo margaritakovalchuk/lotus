@@ -2,31 +2,29 @@ header#header
     .container
         .row
             .col-lg-6.col-md-5.col-1
-                nav.navbar.navbar-toggler.position-absolute(data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="true")
-                    button(type="button").nav__menu Меню
+                nav.navbar.navbar-toggler(data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="true")
+                    button(type="button").navbar__menu Меню
                         svg(class="nav__burger" width="16px" height="13px")
-                            line.short-line(x1="0" y1="1" x2="2" y2="1" stroke="#000000" fill="transparent" stroke-width="1")
+                            line(x1="0" y1="1" x2="2" y2="1" stroke="#000000" fill="transparent" stroke-width="1")
                             line(x1="4" y1="1" x2="16" y2="1" stroke="#f78e6a" fill="transparent" stroke-width="1")
-                            line.short-line(x1="0" y1="6" x2="2" y2="6" stroke="#000000" fill="transparent" stroke-width="1")
+                            line(x1="0" y1="6" x2="2" y2="6" stroke="#000000" fill="transparent" stroke-width="1")
                             line(x1="4" y1="6" x2="16" y2="6" stroke="#f78e6a" fill="transparent" stroke-width="1")
-                            line.short-line(x1="0" y1="12" x2="2" y2="12" stroke="#000000" fill="transparent" stroke-width="1")
+                            line(x1="0" y1="12" x2="2" y2="12" stroke="#000000" fill="transparent" stroke-width="1")
                             line(x1="4" y1="12" x2="13" y2="12" stroke="#f78e6a" fill="transparent" stroke-width="1")
-                    .collapse.navbar-collapse#navbarCollapse
-                        // TODO ul.navbar-nav.main-nav
-                        // .main-nav li a.active {}
+                    .navbar-nav__wrapper.collapse.navbar-collapse#navbarCollapse
                         ul.navbar-nav
-                            li.nav__item: a.nav__link.nav__link_active(href="#firstPage") Главная
-                            li.nav__item: a.nav__link(href="#secondPage") Направления
-                            li.nav__item: a.nav__link(href="#thirdPage") Скидки
-                            li.nav__item: a.nav__link(href="#fourthPage") Преподаватели
-                            li.nav__item: a.nav__link(href="#fifthPage") Абонементы
-                            li.nav__item: a.nav__link(href="#sixthPage") Расписание
-                            li.nav__item: a.nav__link(href="#seventhPage") Отзывы
-                            li.nav__item: a.nav__link(href="#eighthPage") Контакты
+                            li: a.active(href="#firstPage") Главная
+                            li: a(href="#secondPage") Направления
+                            li: a(href="#thirdPage") Скидки
+                            li: a(href="#fourthPage") Преподаватели
+                            li: a(href="#fifthPage") Абонементы
+                            li: a(href="#sixthPage") Расписание
+                            li: a(href="#seventhPage") Отзывы
+                            li: a(href="#eighthPage") Контакты
             .col-lg-3.d-lg-block.d-none
                 p.screen__title Добро пожаловать
-            .d-lg-none.col-md-1.offset-md-0.col-1.offset-9
+            .d-lg-none.col-md-2.offset-md-0.col-2.offset-9.text-right
                 img.lotos(src=path_img + "/img/lotos.png" alt="lotos")
-            .col-lg-3.offset-lg-0.d-md-block.col-md-5.offset-md-1.d-none
+            .col-lg-3.offset-lg-0.col-md-4.d-md-block.offset-md-1.d-none
                 .header__phone
                     a.screen__phone.text-right.d-block(href="tel:+78123455697") +7 (812) 345-56-97
