@@ -58,7 +58,9 @@
 }
 
 .invitation__info > .invitation__title:hover::before,
-.next-page > .next-page__title:hover::after {
+.invitation__info > .invitation__title:focus::before,
+.next-page > .next-page__title:hover::after,
+.next-page:focus > .next-page__title::after {
   @include button_main_hover;
 }
 
@@ -100,7 +102,8 @@
 }
 
 .screen__phone {
-  &:hover {
+  &:hover,
+  &:focus {
     color: $main-color;
   }
 }
@@ -114,7 +117,8 @@
   margin-right: 10px;
   font-size: 8px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $main-color;
   }
 }
@@ -131,16 +135,21 @@
   margin-left: 5px;
 }
 
-.next-page__title::after {
-  content: '\f0d7';
-  font-size: 15px;
-  line-height: 24px;
+.next-page__title {
+  &::after {
+    content: '\f0d7';
+    font-size: 15px;
+    line-height: 24px;
+  }
 }
 
-.contacts-screen .next-page__title::after {
-  content: '\f0d8';
-  line-height: 20px;
-  font-size: 15px;
+//TODO
+.contacts-screen .next-page__title {
+  &::after {
+    content: '\f0d8';
+    line-height: 20px;
+    font-size: 15px;
+  }
 }
 
 /*classes-screen*/
@@ -172,24 +181,31 @@
 
 .switcher li.active::before,
 .switcher a:hover,
+.switcher a:focus,
 .info__title {
   color: $main-color;
 }
 
-.switcher li.active::before {
-  content: 'Yoga —';
-  position: absolute;
-  left: -51px;
+.switcher li.active {
+  &::before {
+    content: 'Yoga —';
+    position: absolute;
+    left: -51px;
+  }
 }
 
-.switcher_trainer li.active::before {
-  content: 'Trainer —';
-  left: -61px;
+.switcher_trainer li.active {
+  &::before {
+    content: 'Trainer —';
+    left: -61px;
+  }
 }
 
-.switcher_client li.active::before {
-  content: 'Clients —';
-  left: -61px;
+.switcher_client li.active {
+  &::before {
+    content: 'Clients —';
+    left: -61px;
+  }
 }
 
 .info__title {
@@ -247,9 +263,13 @@ a.button__sign-in {
   background-image: $gradient-right;
 }
 
-.button__sign-in:hover {
-  color: rgba(252, 102, 162, 1);
-  @include button_main_hover();
+.button__sign-in {
+
+  &:hover,
+  &:focus {
+    color: rgba(252, 102, 162, 1);
+    @include button_main_hover();
+  }
 }
 
 /*trial-screen*/
@@ -399,16 +419,20 @@ td {
     color: $main-color;
   }
 
-  &_download:hover {
+  &_download:hover,
+  &_download:focus {
     background-image: $gradient-top;
+    cursor: pointer;
   }
 
-  &_download:hover .schedule__download::before {
+  &_download:hover .schedule__download::before,
+  &_download:focus .schedule__download::before {
     background: $white-color;
     color: $main-color;
   }
 
-  &_download:hover .schedule__download {
+  &_download:hover .schedule__download,
+  &_download:focus .schedule__download {
     color: $white-color;
   }
 }
@@ -460,27 +484,35 @@ td {
   margin-bottom: 15px;
 }
 
-.contact__map::before,
-.contact__review::before {
-  border-radius: 100%;
-  font-size: 12px;
-  margin-left: 0;
-  margin-right: 5px;
-  font-family: FontAwesome, Arial, sans-serif;
-  padding: 6px;
+.contact__map,
+.contact__review {
+  &::before {
+    border-radius: 100%;
+    font-size: 12px;
+    margin-left: 0;
+    margin-right: 5px;
+    font-family: FontAwesome, Arial, sans-serif;
+    padding: 6px;
+  }
 }
 
-.contact__map::before {
-  content: '\f041';
-  padding: 6px 8px;
+.contact__map {
+  &::before {
+    content: '\f041';
+    padding: 6px 8px;
+  }
 }
 
-.contact__review::before {
-  content: '\f003';
+.contact__review {
+  &::before {
+    content: '\f003';
+  }
 }
 
 .contact__map:hover,
-.contact__review:hover {
+.contact__map:focus,
+.contact__review:hover,
+.contact__review:focus {
   color: $main-color;
 }
 
@@ -498,13 +530,4 @@ td {
   transform: rotate(45deg);
   position: absolute;
   right: -28px;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .pager-current {
-    font-size: 40px;
-  }
-  .pager-last {
-    font-size: 18px;
-  }
 }

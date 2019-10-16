@@ -67,7 +67,15 @@
   .next-page__title {
     font-size: 0;
   }
+
+  .pager-current {
+    font-size: 40px;
+  }
+  .pager-last {
+    font-size: 18px;
+  }
 }
+
 
 @media (min-width: 576px) and (max-width: 767px) {
   .next-page__title {
@@ -79,14 +87,13 @@
   }
 }
 
-@media  (max-width: 575px) {
+@media (max-width: 575px) {
   .next-page__title {
     font-size: 0;
   }
-.lotos {
-  min-width: 33px;
-}
-
+  .lotos {
+    min-width: 33px;
+  }
 }
 
 @media (max-width: 319px) {

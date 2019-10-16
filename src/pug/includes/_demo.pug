@@ -11,7 +11,7 @@ html(lang="ru")
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
         link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=cyrillic" rel="stylesheet")
         link(href="css/main.css" rel="stylesheet")
-        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css")
         link(rel="icon" type="image/png" href=path_img + "/img/favicon-16x16.png" sizes="16x16")
         title Lotos
     body
@@ -34,6 +34,7 @@ html(lang="ru")
                                     .row
                                         .col-lg-9.col-md-12.offset-md-1
                                             a.invitation__info(href="#thirdPage")
+                                                // todo p role button?
                                                 p.invitation__title Приглашаем вас и ваших друзей на бесплатное пробное занятие
                             .col-lg-1.d-lg-block.order-lg-4.offset-lg-1.d-md-none.d-sm-none
                                 .pager.text-right
@@ -53,9 +54,9 @@ html(lang="ru")
                                     li: a(href="#") Кундалини
                                     li: a(href="#") Айенгара
                                     li: a(href="#") Терапия
-                            .col-lg-4.offset-lg-1.col-md-6.order-md-2
+                            .col-lg-4.offset-lg-1.order-lg-1.col-md-6.order-md-2
                                 .wrapper__yogi-person(style=`background-image:url('../img/screen-02.png')`)
-                            .col-lg-5.info.align-self-start.col-md-6.order-md-1
+                            .col-lg-5.order-lg-2.info.align-self-start.col-md-6.order-md-1
                                 .info
                                     .info__title Yoga —
                                     .info__subtitle Для начинающих
@@ -71,7 +72,7 @@ html(lang="ru")
                                     a.button__sign-in(href="#thirdPage")
                                         span.button__item +
                                         | Записаться онлайн
-                            .col-lg-1.d-lg-block.order-lg-4.offset-lg-1.d-md-none
+                            .col-lg-1.d-lg-block.order-lg-3.d-md-none
                                 .pager.text-right
                                     p.pager-current 02
                                     p.pager-last - 08
@@ -104,12 +105,11 @@ html(lang="ru")
                                     p.agreement Нажимая «Отправить заявку», вы даете согласие
                                         br
                                         | на обработку своих персональных данных
-                            .col-md-5
-                                // TODO
+                            .col-md-5.d-none
                                 .alert__notification.d-none
                                     p.alert__thanks Спасибо
                                     p.alert__details Мы свяжемся с вами в течение 15 минут...
-                            .col-md-1
+                            .col-lg-1.d-lg-block.offset-lg-1.d-md-none
                                 .pager.text-right
                                     p.pager-current 03
                                     p.pager-last - 08
@@ -225,11 +225,12 @@ html(lang="ru")
                                 img.lotos(src=path_img + "/img/lotos.png" alt="lotos")
                             .col-md-10
                                 .schedule
-                                    table.schedule__table
+                                    table.table-responsive
                                         thead
                                             tr.schedule__title_bold
                                                 th.schedule__title_download
                                                     form(method="get" action="#")
+                                                        //TODO
                                                     button.schedule__download(type="submit") Скачать расписание
                                                 th.schedule__title_bold 08:00 − 09:25
                                                 th.schedule__title_bold 09:30 − 10:55

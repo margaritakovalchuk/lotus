@@ -27,12 +27,6 @@ p {
   margin-bottom: 0;
 }
 
-//ul {
-//  list-style-type: none;
-//  padding: 0;
-//  margin: 0;
-//}
-
 img {
   width: 100%;
   height: auto;
@@ -49,6 +43,10 @@ label {
 i[class*="fa-"] {
   font-family: "FontAwesome";
   font-style: normal;
+}
+
+* {
+  outline: none;
 }
 
 .navbar,
@@ -82,7 +80,8 @@ i[class*="fa-"] {
   margin-left: 36px;
   padding: 0;
 
-  &hover .navbar-nav a[href] {
+  a:hover,
+  a:focus {
     color: $main-color;
   }
 }
