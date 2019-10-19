@@ -40,3 +40,9 @@
   display: inline-block;
   font-family: FontAwesome, Arial, sans-serif;
 }
+
+@mixin button_main-tablet {
+  font-size: 16px;
+  padding: 24px 50px 24px 80px;
+  border-radius: 35px;
+}

@@ -111,6 +111,7 @@
 .socials,
 .next-page {
   line-height: 24px;
+  margin: 0;
 }
 
 .social__link {
@@ -154,21 +155,30 @@
 
 /*classes-screen*/
 .info {
-  top: 75px;
-  position: relative;
+  margin-top: 60px;
 }
 
 .classes-screen .info {
   top: 40px;
 }
-
-.switcher {
-  position: relative;
-  top: 75px;
-  left: 100px;
+.switcher-wrapper {
+  z-index: 2;
+}
+.direction {
+  white-space: nowrap;
+  margin-top: 60px;
 }
 
-.switcher li {
+.switcher {
+  position: absolute;
+  top: 0;
+  left: 54px;
+  right: 0;
+  width: 118px;
+}
+
+.switcher li,
+.direction {
   font-size: 12px;
   line-height: 28px;
   color: #666666;
@@ -180,19 +190,20 @@
 }
 
 .switcher li.active::before,
+.direction,
 .switcher a:hover,
 .switcher a:focus,
 .info__title {
   color: $main-color;
 }
 
-.switcher li.active {
-  &::before {
-    content: 'Yoga —';
-    position: absolute;
-    left: -51px;
-  }
-}
+//.switcher li.active {
+//  &::before {
+//    content: 'Yoga —';
+//    position: absolute;
+//    left: -51px;
+//  }
+//}
 
 .switcher_trainer li.active {
   &::before {

@@ -71,8 +71,49 @@
   .pager-current {
     font-size: 40px;
   }
+
   .pager-last {
     font-size: 18px;
+  }
+
+  .wrapper__yogi-person {
+    height: calc(67vh - 152px);
+  }
+
+  /*classes-screen*/
+  .info__title {
+    font-size: 46px;
+  }
+
+  .info__subtitle {
+    font-size: 23px;
+    margin-bottom: 47px;
+  }
+
+  .info__description {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .info__description:last-child {
+    margin-bottom: 33px;
+  }
+
+  a.button__sign-in {
+    @include button_main-tablet;
+  }
+
+  .button__item {
+    font-size: 33px;
+    padding: 22px;
+  }
+  .switcher li,
+  .direction {
+    font-size: 16px;
+  }
+  .switcher {
+    left: 65px;
+    width: 145px;
   }
 }
 

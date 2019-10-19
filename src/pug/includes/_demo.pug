@@ -44,19 +44,21 @@ html(lang="ru")
                 .container
                     .main-content.classes-screen
                         .row.align-items-center
-                            .col-lg-1.d-lg-block.order-lg-1.d-none
+                            .col-lg-1.d-lg-block.order-lg-1.d-none.order-md-2
                                 img.lotos(src=path_img + "/img/lotos.png" alt="lotos")
-                            .col-md-2.align-self-start.position-absolute
-                                ul.switcher.list-unstyled
-                                    li.active: a(href="#") Для начинающих
-                                    li: a(href="#") Аштанга Виньяса
-                                    li: a(href="#") Универсальная
-                                    li: a(href="#") Кундалини
-                                    li: a(href="#") Айенгара
-                                    li: a(href="#") Терапия
-                            .col-lg-4.offset-lg-1.order-lg-1.col-md-6.order-md-2
+                            .col-lg-1.order-lg-2.col-md-4.order-md-2.align-self-start
+                                .switcher-wrapper.position-relative
+                                    p.direction Yoga —
+                                    ul.switcher.list-unstyled
+                                        li.active: a(href="#") Для начинающих
+                                        li: a(href="#") Аштанга Виньяса
+                                        li: a(href="#") Универсальная
+                                        li: a(href="#") Кундалини
+                                        li: a(href="#") Айенгара
+                                        li: a(href="#") Терапия
+                            .col-lg-4.offset-lg-1.order-lg-3.ml-lg-0.col-md-5.order-md-3.ml-md-auto
                                 .wrapper__yogi-person(style=`background-image:url('../img/screen-02.png')`)
-                            .col-lg-5.order-lg-2.info.align-self-start.col-md-6.order-md-1
+                            .col-lg-5.order-lg-4.col-md-8.order-md-1.align-self-start
                                 .info
                                     .info__title Yoga —
                                     .info__subtitle Для начинающих
@@ -72,7 +74,7 @@ html(lang="ru")
                                     a.button__sign-in(href="#thirdPage")
                                         span.button__item +
                                         | Записаться онлайн
-                            .col-lg-1.d-lg-block.order-lg-3.d-md-none
+                            .col-lg-1.d-lg-block.order-lg-5.d-md-none
                                 .pager.text-right
                                     p.pager-current 02
                                     p.pager-last - 08
